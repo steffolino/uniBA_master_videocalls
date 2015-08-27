@@ -6,43 +6,63 @@ $(document).ready(function () {
 	if(js_username !== null) {
 			 setInterval(function() {
 				pollForNotifications(js_username);
-				console.log("polling");
+				console.log("polling for "+js_username);
 			}, POLLINGTIME);
-			//console.log(js_username);
-
 	} else {
 		alert("Username not set");
 	}
 
+	$("#answerButton").on('click', function () {
+		var notID = $("#invitationModal #hidden_notificationID").val();
+		setInvitationToAccepted(notID);
+	});
+
+	$("#rejectButton").on('click', function () {
+		var notID = $("#invitationModal #hidden_notificationID").val();
+		setInvitationToRejected(notID);
+	});
+	
 	$("#invitationModal").on('hide.bs.modal', function () {
 		var notID = $("#invitationModal #hidden_notificationID").val();
-		markNotAsRead(notID);
 		console.log("dismissed");
 	});
 		
 });
 
-function markNotAsRead(notID) {
-	
-		$.ajax(
+function setInvitationToAccepted(notID) {
+	$.ajax(
 		{
-			url: 'index.php?r=site/markNotAsRead',
+			url: 'index.php?r=call/setInvitationToAccepted',
 			data: {notID : notID}			
 		})
 		.fail(function(error) {
 			alert("Notification Error: " + error);
 		})
 		.done(function(data) {
-			console.log('notification '+data+ ' marked as read');
+			console.log('notification '+data+ ' marked as accepted');
 		});
-	
 }
+
+function setInvitationToRejected(notID) {
+	$.ajax(
+		{
+			url: 'index.php?r=call/setInvitationToRejected',
+			data: {notID : notID}			
+		})
+		.fail(function(error) {
+			alert("Notification Error: " + error);
+		})
+		.done(function(data) {
+			console.log('notification '+data+ ' marked as rejected');
+		});
+}
+
 
 function pollForNotifications (username) {
 	
 	$.ajax(
 		{
-			url: 'index.php?r=site/pollNotifications',
+			url: 'index.php?r=call/pollNotificationsInvitee',
 			data: {username : username}
 			
 		})
@@ -52,7 +72,7 @@ function pollForNotifications (username) {
 		.success(function(data) {
 			if(data !== "no notifications") {
 				var dataArr = $.parseJSON(data);
-				//console.log(data);
+				console.log(data);
 				$("#invitationModal #invitationText").html(dataArr['notText']);
 				$("#invitationModal #answerButton").prop("href", dataArr['notLink']);
 				$("#invitationModal #hidden_notificationID").prop("value", dataArr['notID']);
@@ -60,6 +80,7 @@ function pollForNotifications (username) {
 			} else {
 				console.log("no nots");
 			}
+			
 		});
 	
 }

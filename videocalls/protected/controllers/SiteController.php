@@ -20,6 +20,7 @@ class SiteController extends Controller
 			),
 		);
 	}
+	
 
 	/**
 	 * This is the default 'index' action that is invoked
@@ -32,126 +33,20 @@ class SiteController extends Controller
 		$userName = Yii::app()->user->name;
 
 		//YESSSSS!
+		$criteria = new CDbCriteria();
+		$criteria->condition = 't.username=:currentUserName';
+		$criteria->params = array(':currentUserName' => $userName);
+				
 		$currentUser = Users::model()->with(
 					'contacts.contactStories',
 					'contacts.contactName',
 					'ownUserStories'
-			)->findAll(array('condition'=>'t.username=:currentUserName', 'params'=>array(':currentUserName'=>Yii::app()->user->name)));;
+			)->findAll($criteria);
 
+		$this->render('index', array('currentUser'=>$currentUser));		
 		
-		//$contacts = UserContacts::model()->findAll(array('order'=>'userID', 'condition'=>'userID=:userID', 'params'=>array(':userID'=>1)));;
-
-		
-		//var_dump($currentUser);
-/*
-		$contactsModel = new ContactsForm();
-		$contactsModel->getAllContacts(1, NULL);
-*/
-		$this->render('index', array('currentUser'=>$currentUser));
-		
-		
-		
-	}
+	}	
 	
-	public function actionMarkNotAsRead() {
-		if(!empty($_GET['notID'])) {
-				$notID = $_GET['notID'];
-				$notification = UserNotifications::model()
-					->find(array(
-								'condition'=>
-									't.notID=:notID',
-								'params'=>array(
-									':notID'=>$notID
-								)
-						)
-					);
-				$notification->notRead = true;
-				$notification->save();
-				echo $notification->notID;
-		} else {
-			echo "Could not mark Notification as Read";
-		}
-	}
-	
-	/**
-	* pollForNotifications
-	* checks for unread invitations by username
-	**/
-	public function actionPollNotifications () 
-	{			
-			//TODO: move to model
-			$result = Yii::app()->db->createCommand()
-				->select('u.userID')
-				->from('users u')
-				->where('u.username=:username', array(':username'=>Yii::app()->user->name))
-				->queryRow();
-			
-			if(!empty($result['userID'])) {
-				$notification = UserNotifications::model()
-					->find(array(
-								'condition'=>
-									't.userID=:userID',
-								'condition' => 
-									't.notRead = 0',								
-								'params'=>array(
-									':userID'=>$result['userID']
-								)
-						)
-					);
-					
-				if(!empty($notification)) {
-					$notJSON = CJSON::encode($notification);
-					//echo "<a id='invitationLink' href='".$notification->notLink."'>".$notification->notText."</a>";
-					echo $notJSON;
-				} else {
-					echo "no notifications";
-					//var_dump($notification);
-				}
-			
-			} else {
-				echo "Error reading Notifications";
-			}	
-	}
-
-	/**
-	* Sends an invitation to user by userID
-	* Shows user's details while waiting for user to answer
-	* when answering --> callback and establish connection
-	* BASICALLY: I INVITE YOU TO MY ROOM
-	 */
-	public function actionInvite()
-	{
-		$inviteeID = Yii::app()->getRequest()->getParam('contactID');
-		
-		//$notification = UserNotifications::model()->find(array('condition'=>'userID=:inviteeID', 'params'=>array(':inviteeID'=>$inviteeID)));
-		
-		$notification = new UserNotifications;
-		$notification->userID = $inviteeID;
-		$notification->notText = 'You are invited to answer the call by '.Yii::app()->user->name;
-		$notification->notLink = Yii::app()->createUrl('site/room', array('roomId'=> Yii::app()->user->name));
-		$notification->notRead = false;
-		$notification->save();
-		
-		//TODO: move to model
-		$result = Yii::app()->db->createCommand()
-				->select('u.userID')
-				->from('users u')
-				->where('u.username=:username', array(':username'=>Yii::app()->user->name))
-				->queryRow();
-
-		$invitee = Users::model()
-				->with('ownUserStories')
-				->find(array(
-							'condition'=>'t.userID=:userID', 
-							'params'=>array(':userID'=>$inviteeID)
-					)
-		);
-		
-		//TODO: send invitation link to invitee --> Plugin PM?
-		
-		$this->render('calling', array('invitee'=>$invitee));
-	}
-
 	/**
 	 * This is the action to handle external exceptions.
 	 */
@@ -231,18 +126,6 @@ class SiteController extends Controller
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
-	}
-	
-	/*** added by stef
-	***/
-	public function actionPrepareCall() {
-
-			$userStories;
-			$userHandler = New UserHandlerForm;
-			
-			$userHandler->getUserStories(5, NULL);
-			$this->render('calling',array('userModel'=>$userHandler));
-			
 	}
 	
 }

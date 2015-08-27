@@ -1,3 +1,24 @@
+#CUSTOM
+#demos
+videocalls/demos/*
+
+#application.log
+videocalls/protected/runtime/*
+
+#database.php
+videocalls/protected/config/database.php
+
+#yii gitignore template
+videocalls/assets/*
+!videocalls/assets/.gitignore
+videocalls/protected/runtime/*
+!videocalls/protected/runtime/.gitignore
+videocalls/protected/data/*.db
+videocalls/themes/classic/views/
+
+
+#TEMPLATE?
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

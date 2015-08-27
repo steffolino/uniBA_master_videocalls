@@ -5898,3 +5898,1137 @@ Stack trace:
 REQUEST_URI=/yii/videocalls/index.php?r=site/room&roomId=josef
 HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
 ---
+2015/08/11 17:48:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pollNotification".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('pollNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotification
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/invite&contactID=1
+---
+2015/08/11 17:49:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pollNotification".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('pollNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotification
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/invite&contactID=1
+---
+2015/08/11 17:50:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotifications&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:04:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "room".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('room')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('room')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/room')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/room&roomId=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:19:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pollNotifications".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('pollNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotifications&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:19:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pollNotifications".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('pollNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotifications&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:19:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pollNotifications".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('pollNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotifications&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:21:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pollNotifications".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('pollNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotifications&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:21:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pollNotifications".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('pollNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotifications&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:21:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pollNotifications".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('pollNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotifications&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:24:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "pollNotifications".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('pollNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotifications&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:25:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "invite".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('invite')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('invite')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/invite')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/invite&contactID=1
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:25:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "invite".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('invite')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('invite')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/invite')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/invite&contactID=1
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:25:39 [error] [exception.CException] exception 'CException' with message 'CallController cannot find the requested view "calling".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('calling', Array, true)
+#1 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(149): CController->render('calling', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionInvite()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('invite')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/invite')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=1
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/11 18:26:07 [error] [exception.CException] exception 'CException' with message 'CallController cannot find the requested view "site/calling".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('site/calling', Array, true)
+#1 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(149): CController->render('site/calling', Array)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionInvite()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('invite')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/invite')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=1
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 13:38:55 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.notRead' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE t.notRead = 0 LIMIT 1.
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (57)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/17 13:38:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.notRead' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE t.notRead = 0 LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(57): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 13:39:03 [error] [exception.CException] exception 'CException' with message 'Property "UserNotifications.notRead" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('notRead', true)
+#1 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(23): CActiveRecord->__set('notRead', true)
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionMarkNotAsRead()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsRead')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotAsR...')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotAsRead&notID=14
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 13:39:13 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.notRead' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE t.notRead = 0 LIMIT 1.
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (57)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/17 13:39:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.notRead' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE t.notRead = 0 LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(57): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 14:49:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsRead".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsRead')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsRead')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotAsR...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotAsRead&notID=16
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 14:54:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 14:55:56 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "redirect".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\views\site\calling.php(97): CComponent->__call('redirect', Array)
+#1 C:\xampp\htdocs\yii\videocalls\protected\views\site\calling.php(97): CWebApplication->redirect('home')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('//site/calling', Array, true)
+#6 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(149): CController->render('//site/calling', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionInvite()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('invite')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/invite')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=1
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 14:57:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 14:57:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsRead".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsRead')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsRead')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotAsR...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotAsRead&notID=16
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 15:01:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsRead".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsRead')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsRead')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotAsR...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotAsRead&notID=17
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 15:01:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsRead".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsRead')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsRead')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotAsR...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotAsRead&notID=17
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 15:01:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsRead".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsRead')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsRead')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotAsR...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotAsRead&notID=19
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 15:24:04 [error] [php] Creating default object from empty value (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:186)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/setInvitationToRejected&notID=31
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (186)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/17 15:24:04 [error] [php] Creating default object from empty value (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotAsCompleted&notID=31
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (22)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/17 15:24:09 [error] [php] Creating default object from empty value (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:186)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/setInvitationToRejected&notID=31
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (186)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/17 15:24:09 [error] [php] Creating default object from empty value (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:22)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotAsCompleted&notID=31
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (22)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/17 15:33:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 15:37:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotificationAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotificationAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 15:43:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "setInvitationToRejected_2ndStage".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('setInvitationTo...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('setInvitationTo...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/setInvitat...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/setInvitationToRejected_2ndStage&notID=38
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 15:44:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 16:11:50 [error] [php] Creating default object from empty value (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:42)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/setInvitationToRejected_1stStage&notID=40
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (42)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/17 16:32:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 16:39:09 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'userID=:userID')
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1460): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(130): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 16:39:15 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'userID=:userID')
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1460): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(130): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 16:39:25 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'userID=:userID')
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1460): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(130): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 16:39:25 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'userID=:userID')
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1460): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(130): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 16:39:38 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'userID=:userID')
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1460): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(130): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 16:39:53 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'userID=:userID')
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1460): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(130): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 16:39:55 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'userID=:userID')
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1460): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(130): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 16:41:58 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'userID=:userID')
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1460): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(130): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 16:42:00 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.0" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\schema\CDbCriteria.php(160): CComponent->__set('0', 'userID=:userID')
+#1 C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1460): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(130): CActiveRecord->find(Array)
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/17 16:48:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 16:58:18 [error] [php] Undefined variable: invitee (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:203)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=1
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (203)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/17 16:59:59 [error] [php] Creating default object from empty value (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/setInvitationToRejected_1stStage&notID=56
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (36)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/17 17:22:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 17:26:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 17:26:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 17:26:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 17:27:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotAsCompleted".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotAsComple...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotAsComple...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/markNotAsC...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/markNotAsCompleted
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/17 17:28:48 [error] [php] Creating default object from empty value (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/setInvitationToRejected_1stStage&notID=62
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (36)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 13:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotificationAsAccepted_2ndStage".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotificationAsAccepted_2ndStage
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/24 13:31:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotificationAsAccepted_2ndStage".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotificationAsAccepted_2ndStage
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/24 13:31:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotificationAsAccepted_2ndStage".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotificationAsAccepted_2ndStage
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/24 15:20:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotificationAsAccepted_2ndStage".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotificationAsAccepted_2ndStage
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/24 15:20:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotificationAsAccepted_2ndStage".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotificationAsAccepted_2ndStage
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/24 15:22:46 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:inviteeID AND not1stStage_Invitation != "unread" AND notCompleted = 0 LIMIT 1.
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (149)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 15:22:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:inviteeID AND not1stStage_Invitation != "unread" AND notCompleted = 0 LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(149): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInviter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInviter&inviteeID=1
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/24 15:22:46 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:currentUserID AND not1stStage_Invitation = "unread" AND notCompleted = 0 LIMIT 1.
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (119)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 15:22:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:currentUserID AND not1stStage_Invitation = "unread" AND notCompleted = 0 LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(119): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/24 15:36:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "markNotificationAsAccepted_2ndStage".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('markNotificatio...')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('markNotificatio...')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/markNotifi...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/markNotificationAsAccepted_2ndStage
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/24 15:36:40 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:inviteeID AND not1stStage_Invitation != "unread" AND notCompleted = 0 LIMIT 1.
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (149)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 15:36:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:inviteeID AND not1stStage_Invitation != "unread" AND notCompleted = 0 LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(149): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInviter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInviter&inviteeID=1
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/24 15:48:30 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:currentUserID AND not1stStage_Invitation = "unread" AND notCompleted = 0 LIMIT 1.
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (83)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 15:48:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:currentUserID AND not1stStage_Invitation = "unread" AND notCompleted = 0 LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(83): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/24 15:48:32 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:currentUserID AND not1stStage_Invitation = "unread" AND notCompleted = 0 LIMIT 1.
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (83)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 15:48:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:currentUserID AND not1stStage_Invitation = "unread" AND notCompleted = 0 LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(83): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/24 15:48:40 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:currentUserID AND not1stStage_Invitation = "unread" AND notCompleted = 0 LIMIT 1.
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (83)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 15:48:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:currentUserID AND not1stStage_Invitation = "unread" AND notCompleted = 0 LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(83): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=irma
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/24 15:50:30 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:inviteeID AND not1stStage_Invitation != "unread" AND notCompleted = 0 LIMIT 1.
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (113)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 15:50:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'not1stStage_Invitation' in 'where clause'. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:inviteeID AND not1stStage_Invitation != "unread" AND notCompleted = 0 LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(113): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInviter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInviter&inviteeID=1
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=1
+---
+2015/08/24 17:18:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "room".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('room')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('room')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/room')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&roomID=irma
+---
+2015/08/24 17:52:04 [error] [php] Undefined variable: notID (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:153)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=1
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (153)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 17:55:29 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:155)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=1
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (155)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 18:00:09 [error] [php] Trying to get property of non-object (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:155)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=1
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (155)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 18:01:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "room".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('room')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('room')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/room')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/room&roomId=josef&notID=
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/24 18:02:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "room".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('room')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('room')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/room')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/room&roomId=josef&notID=
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/24 18:02:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "room".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('room')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('room')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/room')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/room&roomId=josef&notID=
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/24 18:03:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "room".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('room')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('room')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/room')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/room&roomId=josef&notID=
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/24 18:03:25 [error] [exception.CException] exception 'CException' with message 'CallController cannot find the requested view "room".' in C:\xampp\htdocs\yii\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('room', NULL, true)
+#1 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(171): CController->render('room')
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionRoom()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('room')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/room')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&roomId=josef&notID=
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
+---
+2015/08/24 18:56:17 [error] [php] Undefined variable: userName (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:171)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&roomId=josef&guest=josef
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (171)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 18:56:22 [error] [php] Undefined variable: userName (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:171)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&roomId=josef&notID=25
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (171)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 19:00:18 [error] [php] Undefined variable: conversationPartners (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:170)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&roomId=josef&notID=25
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (170)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 19:01:48 [error] [php] Undefined variable: conversationPartners (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:170)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&roomId=josef&notID=25
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (170)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 19:01:53 [error] [php] Undefined variable: notification (C:\xampp\htdocs\yii\videocalls\protected\views\site\calling.php:77)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): CallController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): CallController->renderPartial()
+#2 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(162): CallController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionInvite()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=1
+in C:\xampp\htdocs\yii\videocalls\protected\views\site\calling.php (77)
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (162)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 19:03:11 [error] [php] Undefined variable: conversationPartners (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:170)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&roomId=josef&guest=1
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (170)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 19:07:07 [error] [php] Creating default object from empty value (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/setInvitationToRejected&notID=26
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (36)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 19:07:53 [error] [php] Undefined variable: conversationPartners (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:172)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&roomId=1&guest=2
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (172)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/24 19:08:00 [error] [php] Undefined variable: conversationPartners (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:172)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&roomId=2&guest=1
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (172)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)

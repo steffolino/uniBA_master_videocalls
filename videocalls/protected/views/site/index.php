@@ -65,7 +65,7 @@ echo "</pre>";
 									'header' => 'Do you really want to call  '.strToUpper($contact['contactName']['username']),
 									'content' => "<div style='margin-left:auto; margin-right:auto; width:25%;'><img class='img-circle'  src='images/userImages/user".$contact['contactID'].".jpg' style='max-height:160px;' alt=".$contact['contactName']['username']."></div>",
 									'footer' => array(
-										TbHtml::button('Yes', array('data-dismiss' => 'modal', 'submit'=>'index.php?r=site/invite&contactID='.$contact['contactID'], 'color' => TbHtml::BUTTON_COLOR_PRIMARY)),
+										TbHtml::button('Yes', array('data-dismiss' => 'modal', 'submit'=>'index.php?r=call/invite&contactID='.$contact['contactID'], 'color' => TbHtml::BUTTON_COLOR_PRIMARY)),
 										TbHtml::button('No', array('data-dismiss' => 'modal')),
 									 ),
 								));
@@ -81,14 +81,13 @@ echo "</pre>";
 	  <div class="modal-dialog">
 		<div class="modal-content">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 			<h4 class="modal-title">Incoming Call</h4>
 		  </div>
 		  <div class="modal-body">
 			<p id="invitationText"></p>
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" class="btn btn-default" data-dismiss="modal">Reject</button>
+			<button id="rejectButton" type="button" class="btn btn-default" data-dismiss="modal">Reject</button>
 			<a id="answerButton" type="submit" class="btn btn-primary">Answer Call</a>
 			<input id="hidden_notificationID" type=hidden />
 		  </div>
