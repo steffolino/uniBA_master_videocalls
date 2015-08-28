@@ -16,12 +16,12 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 
 <!-- Header -->
 <div class=row>
-	<div class="jumbotron col-md-10 col-md-offset-1 jumboheader">
+	<div class="jumbotron col-md-12 _col-md-offset-1 jumboheader">
 			<div class=row>
 				<h2>Hello <?php echo Yii::app()->user->name; ?></h2>
 				<p>
 					<?php 
-						echo "We are waiting for ".$invitee->username." to answer the call ..."; 
+						echo "We are waiting for ".strtoupper($invitee->username)." to answer the call ..."; 
 					?>
 				</p>
 		</div>
@@ -37,7 +37,7 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 ?>
 <!-- Main -->
 <div class=row">
-	<div class="jumbotron col-md-10 col-md-offset-1">
+	<div class="jumbotron col-md-12 _col-md-offset-1">
 		<p class=lead>
 		While waiting ...
 		</p>
@@ -123,13 +123,11 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 	<!-- END OF NoAnswer Modal -->
 
 <!-- Footer -->
-<div class=row>
-		<div class="jumbotron col-md-10 col-md-offset-1">
+<!--div class=row>
+		<div class="jumbotron col-md-12 _col-md-offset-1">
 			<div class="col-md-4 col-md-offset-4">
 			<!--TODO: replace hard-coded logout-->
-				<a href='<?php echo $HomeLink; ?>';">Hang Up!&nbsp;<span style="cursor:pointer" class="glyphicon glyphicon-log-out" alt="Bye!"></span></a>
+				<!--a href='<?php //echo //$HomeLink; ?>';">Hang Up!&nbsp;<span style="cursor:pointer" class="glyphicon glyphicon-log-out" alt="Bye!"></span></a>
 			</div>
 		</div>
-</div>	
-	
-</div>
+</div-->	

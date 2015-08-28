@@ -7032,3 +7032,149 @@ Stack trace:
 REQUEST_URI=/yii/videocalls/index.php?r=call/room&roomId=2&guest=1
 in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (172)
 in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/27 15:08:38 [error] [php] Object of class UserDescriptions could not be converted to string (C:\xampp\htdocs\yii\videocalls\protected\views\call\room.php:69)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): CallController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): CallController->renderPartial()
+#2 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(180): CallController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionRoom()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&host=1&guest=2
+in C:\xampp\htdocs\yii\videocalls\protected\views\call\room.php (69)
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (180)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/27 15:10:37 [error] [exception.CException] exception 'CException' with message 'Property "UserDescriptions.userDescription" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('userDescription')
+#1 C:\xampp\htdocs\yii\videocalls\protected\views\call\room.php(69): CActiveRecord->__get('userDescription')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('room', Array, true)
+#6 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(180): CController->render('room', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionRoom()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('room')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/room')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&host=1&guest=2
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=2
+---
+2015/08/27 15:23:06 [error] [php] Undefined variable: visavis (C:\xampp\htdocs\yii\videocalls\protected\views\call\room.php:44)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(869): CallController->renderFile()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(782): CallController->renderPartial()
+#2 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(180): CallController->render()
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionRoom()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/room&host=1&guest=2
+in C:\xampp\htdocs\yii\videocalls\protected\views\call\room.php (44)
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (180)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/28 10:35:30 [error] [php] Undefined offset: 1 (C:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php:560)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): UserNotifications->query()
+#1 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(87): UserNotifications->find()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInvitee()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (87)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/28 11:10:16 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:inviteeID AND notAnswer != "unread" AND notCompleted = 0 AND notTimeCreated > $responseTimeout LIMIT 1.
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (120)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/28 11:10:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens. The SQL statement executed was: SELECT * FROM `UserNotifications` `t` WHERE userID=:inviteeID AND notAnswer != "unread" AND notCompleted = 0 AND notTimeCreated > $responseTimeout LIMIT 1' in C:\xampp\htdocs\yii\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1356): CDbCommand->queryRow()
+#2 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1461): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(120): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionPollNotificationsInviter()
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('pollNotificatio...')
+#9 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/pollNotifi...')
+#10 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInviter&inviteeID=2
+HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=call/invite&contactID=2
+---
+2015/08/28 12:06:46 [error] [php] Undefined variable: responseTimeout (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:117)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInviter&inviteeID=2
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (117)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/28 12:07:04 [error] [php] Undefined variable: responseTimeout (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:81)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (81)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/28 14:19:13 [error] [php] Undefined variable: responseTimeout (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:87)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (87)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/28 14:20:23 [error] [php] Undefined variable: responseTimeout (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:87)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (87)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/08/28 14:24:07 [error] [php] Undefined variable: responseTimeout (C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php:87)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(286): CallController->runAction()
+#1 C:\xampp\htdocs\yii\framework\web\CController.php(265): CallController->runActionWithFilters()
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CallController->run()
+#3 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=call/pollNotificationsInvitee&username=josef
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php (87)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)

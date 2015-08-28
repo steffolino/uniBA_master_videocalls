@@ -1,6 +1,6 @@
 
 var POLLINGTIME = 5000;
-var HANGUPTIMEOUT = 900000;
+var HANGUPTIMEOUT = 6000000;
 
 $(document).ready(function () {
 

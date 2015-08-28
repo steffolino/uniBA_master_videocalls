@@ -9,6 +9,12 @@
 	<?php 	
 		//yiistrap stuff
 		Yii::app()->bootstrap->register(); 
+
+		$baseUrl = Yii::app()->baseUrl; 
+		$cs = Yii::app()->getClientScript();
+		$cs->registerCssFile($baseUrl.'/css/font-awesome.min.css');
+		$cs->registerScriptFile($baseUrl.'/js/cleanupOldNots.js');
+			
 	?>
 	<!-- blueprint CSS framework -->
 	<?php /*

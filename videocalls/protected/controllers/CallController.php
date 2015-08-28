@@ -75,17 +75,18 @@ Class CallController extends Controller
 				->queryRow();
 						
 			if(!empty($result['userID'])) {
-				
+								
 				$criteria = new CDbCriteria();
 				$criteria->condition = 'userID=:currentUserID AND notAnswer = "unread" AND notCompleted = 0';
-				$criteria->params = array('currentUserID' => $result['userID']);
+				$criteria->params = array(':currentUserID' => $result['userID']);
 				
 				$notification = UserNotifications::model()->find($criteria);
 					
 				if(!empty($notification)) {
 					$notJSON = CJSON::encode($notification);
+					$notResponseTimeout = CJSON::encode($responseTimeout);
 					//echo "<a id='invitationLink' href='".$notification->notLink."'>".$notification->notText."</a>";
-					echo $notJSON;
+					echo $notJSON; //+ $notResponseTimeout;
 				} else {
 					echo "no notifications";
 					//var_dump($notification);
@@ -104,8 +105,7 @@ Class CallController extends Controller
 	{			
 		if(!empty($_GET['inviteeID'])) {
 			$inviteeID = $_GET['inviteeID'];
-			//echo $inviteeID;
-		
+
 			$criteria = new CDbCriteria();
 			$criteria->condition = 'userID=:inviteeID AND notAnswer != "unread" AND notCompleted = 0';
 			$criteria->params = array('inviteeID' => $inviteeID);
@@ -185,6 +185,37 @@ Class CallController extends Controller
 			echo "GET NOT SET";
 			$this->render('room');//, array('conversationPartners' => $conversationPartners));
 		}
+	}
+	
+	public function actionCleanupOldNots () {
+
+		$currentTime = time();
+		$timeDiff = 600; //10 minutes in seconds
+		$responseTimeout = $currentTime - $timeDiff;
+		
+		//echo $responseTimeout;
+		
+		$criteria = new CDbCriteria();
+		$criteria->condition = 'notCompleted = 0';
+		
+		$notificationArray = UserNotifications::model()->findAll($criteria);
+
+		$cleanupCounter = 0;
+		
+		foreach($notificationArray as $notification) {
+			
+			if(strtotime($notification->notTimeCreated) < $responseTimeout) {
+				$notification->notCompleted = true;
+				$cleanupCounter++;
+				$notification->save();
+			}
+
+			
+		}
+		
+		echo "Cleaned ".$cleanupCounter . " notifications"; 
+
+
 	}
 
 }

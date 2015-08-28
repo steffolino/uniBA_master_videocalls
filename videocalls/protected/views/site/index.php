@@ -14,11 +14,25 @@ $cs->registerScriptFile($baseUrl.'/js/pollForNotifications.js');
 
 <!-- Header -->
 <div class=row>
-	<div class="jumbotron col-md-10 col-md-offset-1 jumboheader">
-			<h2>Welcome, <?php echo Yii::app()->user->name; ?></h2>
-			<p class="lead">
-					Would you like to call somebody?
-			</p>
+	<div class="jumbotron col-md-12 _col-md-offset-1 jumboheader">
+		<div class="row">
+			<div class="col-md-6">
+				<h2>Welcome, <?php echo Yii::app()->user->name; ?></h2>
+				<p class="lead">
+					<?php
+					if(isset($_GET['leftCall'])) {
+						echo "You just left the call with ". strtoupper(htmlspecialchars($_GET['leftCall']));					
+					} else {
+						echo "Would you like to call somebody?";
+					}
+					?>
+				</p>
+			</div>
+			<div class="col-md-3 col-md-offset-3" style="margin-top: 30px">
+					<a  type="button" class="btn btn-primary" href='<?php echo $logoutLink; ?>';">You're not <?php echo Yii::app()->user->name; ?>?&nbsp;<span style="cursor:pointer" class="glyphicon glyphicon-log-out" alt="Bye!"></span></a>
+			</div>
+
+		</div>
 	</div>
 </div>
 <?php 
@@ -30,7 +44,7 @@ echo "</pre>";
 ?>
 <!-- Main -->
 <div class=row">
-	<div class="jumbotron col-md-10 col-md-offset-1">
+	<div class="jumbotron col-md-12 _col-md-offset-1">
 			<?php 
 					echo "<div class='row'>";
 					foreach($currentUser[0]['contacts'] as $contact) {
@@ -96,14 +110,23 @@ echo "</pre>";
 	</div><!-- /.modal -->
 	<!-- END OF Invitation Modal -->
 		
-	<!-- Footer -->
-	<div class=row>
-			<div class="jumbotron col-md-10 col-md-offset-1">
-				<div class="col-md-3 col-md-offset-9">
-				<!--TODO: replace hard-coded logout-->
-					<a href='<?php echo $logoutLink; ?>';">You're not <?php echo Yii::app()->user->name; ?>?&nbsp;<span style="cursor:pointer" class="glyphicon glyphicon-log-out" alt="Bye!"></span></a>
+	<!-- Footer >
+	<!--div id="room_footer" class=row>
+		<div class="jumbotron col-md-12 _col-md-offset-1">
+			<div class=row>
+				<div id="hangUpBtnDiv" class="col-md-4">
+					<div id="hangUpBtn" class="btn btn-lg btn-danger col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-phone-square"> Hang up</i></div>
+				</div>
+				<div id="fullscreenBtnDiv" class="col-md-4">
+					<div id="fullscreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-arrows-alt"> Fullscreen</i></div>
+				</div>
+
+				<div id="infoBtnDiv" class="col-md-4">
+					<div id="infoBtn" class="btn btn-lg btn-success col-md-10 col-md-offset-1" style="cursor:pointer"><i style="aling:center" class="fa fa-2x fa-info-circle"> Info</i></div>
 				</div>
 			</div>
-	</div>	
+		</div>
+</div>	
+
 	
-</div>
+</div-->

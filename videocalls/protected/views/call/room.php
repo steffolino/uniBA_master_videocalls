@@ -5,11 +5,17 @@ $this->pageTitle=Yii::app()->name . ' - Room';
 $this->breadcrumbs=array(
 	'Room',
 );
-
+/*
 Yii::app()->clientScript->registerScriptFile(
-	'http://simplewebrtc.com/latest.js'
+	//only when connected to internet
+	//'http://simplewebrtc.com/latest.js'
 );
+*/
 
+	$baseUrl = Yii::app()->baseUrl; 
+	$cs = Yii::app()->getClientScript();
+	$cs->registerScriptFile($baseUrl.'/js/Fullscreen/jquery.fullscreen-min.js');
+	$cs->registerScriptFile($baseUrl.'/js/SimpleWebRTC/simplewebrtc-latest.js');
 ?>
 
 <?php
@@ -22,70 +28,153 @@ $logoutLink =  Yii::app()->createUrl('/site/logout');
     var js_username = "<?php echo Yii::app()->user->name ?>";
 </script>
 
+<?php
+foreach($conversationPartners as $participant) {
+	if($participant->username !== Yii::app()->user->name) {
+			$visavis = $participant;
+	}
+}
+?>
+<div id="opacLayer" class="modal fadein hidden" style="background-color:#222222;">
+</div>
 <!-- Header -->
 <div class=row>
-	<div class="jumbotron col-md-10 col-md-offset-1 jumboheader">
-			<h2>Welcome, <?php echo Yii::app()->user->name; ?></h2>
+	<div class="jumbotron col-md-12 _col-md-offset-1 jumboheader">
+			<h2>Hello <?php echo Yii::app()->user->name; ?></h2>
 			<p class="lead">
-					Would you like to call somebody?
+				Your are talking to <?php echo strtoupper($visavis->username); ?>
 			</p>
 	</div>
 </div>
 <?php 
 
-echo "<pre>";
-var_dump($conversationPartners); 
-echo "</pre>";
 
 ?>
 <!-- Main -->
 <div class=row">
-	<div class="jumbotron col-md-10 col-md-offset-1">
-	<p>Welcome to the WebRTC Demo</p>
-        <video id="localVideo"></video>
-        <div id="remoteVideos"></div>
-	</div>
-</div>		
-	<!-- Footer -->
-	<div class=row>
-			<div class="jumbotron col-md-10 col-md-offset-1">
-				<div class="col-md-3 col-md-offset-9">
-				<!--TODO: replace hard-coded logout-->
-					<a href='<?php echo $logoutLink; ?>';">You're not <?php echo Yii::app()->user->name; ?>?&nbsp;<span style="cursor:pointer" class="glyphicon glyphicon-log-out" alt="Bye!"></span></a>
+	<div class="jumbotron col-md-12">
+		<div class="row">
+			<div class="col-md-12">
+				<div class=row style="border:1px solid #222222; background-color:#222222;">
+					<!--div id="videoLeft" class="col-md-2">
+						<p>test left</p>
+					</div-->
+					<div id="videoCenter" class="col-md-7">
+						<video id="localVideo" height=auto width="100%"></video>
+						<div id="remoteVideos"></div>
+					</div>
+					<div id ="videoRight" class="col-md-5" style="background-color:#fefefe; height:100%; display:none;">
+						<blockquote id="videoRight_infoText">
+						<?php
+							foreach ($visavis->ownUserStories as $userDescriptionClass) {
+								echo "<p>".$userDescriptionClass->userStory."</p>";	
+							}
+						?>
+						</blockquote>
+					</div>
 				</div>
 			</div>
-	</div>	
-	
-</div>
+		</div>
+	</div>
+</div>		
+
+
+
+
+<!-- Footer -->
+<div id="room_footer" class=row>
+		<div class="jumbotron col-md-12 _col-md-offset-1">
+			<div class=row>
+				<div id="hangUpBtnDiv" class="col-md-4">
+					<div id="hangUpBtn" class="btn btn-lg btn-danger col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-phone-square"> Hang up</i></div>
+				</div>
+				<div id="fullscreenBtnDiv" class="col-md-4">
+					<div id="fullscreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-arrows-alt"> Fullscreen</i></div>
+				</div>
+				<div id="smallScreenBtnDiv" class="col-md-4 hidden">
+					<div id="smallScreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-bars"> Smallscreen</i></div>
+				</div>
+				<div id="infoBtnDiv" class="col-md-4">
+					<div id="infoBtn" class="btn btn-lg btn-success col-md-10 col-md-offset-1" style="cursor:pointer"><i style="aling:center" class="fa fa-2x fa-info-circle"> Info</i></div>
+				</div>
+			</div>
+		</div>
+</div>	
 
 <style>
-    #remoteVideos video {
-        height: 520px;
-    }
-    #localVideo {
-        height: 150px;
-    }
+.footFully {
+	left: 13.5%;
+	padding: 5px 0px;
+	width: 75%;
+	bottom: 5px;
+	position: fixed;
+	z-index: 9999;
+}
+
+.jumboFully {
+	padding: 0px !important;
+	margin: 0px !important;
+	z-index: 1051;
+}
+
+#room_footer .jumboFully {
+	background-color:transparent;
+}
+
 </style>
-
-<h1>WebRTC</h1>
-
-		
+			
 <script>
-var webrtc = new SimpleWebRTC({
-    // the id/element dom element that will hold "our" video
-    localVideoEl: 'localVideo',
-    // the id/element dom element that will hold remote videos
-    remoteVideosEl: 'remoteVideos',
-    // immediately ask for camera access
-    autoRequestMedia: true
-});
 
-var roomName = getUrlParameter('roomId');
+    var js_visavisName = "<?php echo $visavis->username ?>";
 
-// we have to wait until it's ready
-webrtc.on('readyToCall', function () {
-    // you can name it anything
-    webrtc.joinRoom(roomName);
+//TODO: export to extra js file
+$(document).ready(function() {
+	$("#infoBtn").on('click', function () {
+		$("#videoRight").slideToggle('slow');
+	});
+	
+	$("#hangUpBtn").on('click', function () {
+		window.location = "index.php?r=site/index&leftCall="+js_visavisName;
+	});
+	
+	$("#fullscreenBtn").on('click', function () {
+		console.log("fullscreen");
+		$("#videoCenter").removeClass('col-md-7'); // standard
+		$("#videoCenter").addClass('col-md-10 col-md-offset-1'); // standard
+		$("#smallScreenBtnDiv").removeClass('hidden col-md-4');
+		$("#smallScreenBtnDiv").addClass('col-md-6');
+		$("#hangUpBtnDiv").removeClass('col-md-4');
+		$("#hangUpBtnDiv").addClass('col-md-6');
+		$("#fullscreenBtnDiv").addClass('hidden');		
+		$("#infoBtnDiv").addClass('hidden');		
+		$("#localVideo").css({'height': '100%'});
+		$(".jumboheader").addClass('hidden');
+		$("#room_footer").addClass('footFully');
+		$("#videoRight").addClass('hidden');
+		$(".jumbotron").addClass('jumboFully');
+		$("#opacLayer").show().removeClass('hidden');
+		$(document.body).css('overflow','hidden');
+		$(document).scrollTop(0);
+	});
+	
+	$("#smallScreenBtn").on('click', function () {
+		$("#videoCenter").addClass('col-md-7'); // standard
+		$("#videoCenter").removeClass('col-md-10 col-md-offset-1'); // standard
+		$("#smallScreenBtnDiv").addClass('hidden col-md-4');
+		$("#smallScreenBtnDiv").removeClass('col-md-6');
+		$("#hangUpBtnDiv").addClass('col-md-4');
+		$("#hangUpBtnDiv").removeClass('col-md-6');
+		$("#fullscreenBtnDiv").removeClass('hidden');		
+		$("#infoBtnDiv").removeClass('hidden');		
+		$("#localVideo").css({'height': 'auto'});
+		$(".jumboheader").removeClass('hidden');
+		$("#room_footer").removeClass('footFully');
+		$("#videoRight").removeClass('hidden');
+		$(".jumbotron").removeClass('jumboFully');
+		$("#opacLayer").hide().addClass('hidden');
+		$(document.body).css('overflow','auto');
+		$(document).scrollTop(0);
+	});
 });
 
 var getUrlParameter = function getUrlParameter(sParam) {
@@ -102,4 +191,25 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+
+var webrtc = new SimpleWebRTC({
+    // the id/element dom element that will hold "our" video
+    localVideoEl: 'localVideo',
+    // the id/element dom element that will hold remote videos
+    remoteVideosEl: 'remoteVideos',
+    // immediately ask for camera access
+    autoRequestMedia: true
+});
+
+var roomHost = getUrlParameter('host');
+var roomGuest = getUrlParameter('guest');
+var roomName = roomHost+roomGuest;
+
+// we have to wait until it's ready
+webrtc.on('readyToCall', function () {
+    // you can name it anything
+    webrtc.joinRoom(roomName);
+});
+
+
 </script>
