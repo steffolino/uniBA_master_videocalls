@@ -24,7 +24,7 @@ class UserIdentity extends CUserIdentity
 	 
 	public function authenticate()
 	{
-		$users=array(
+		$Users=array(
 			// username => password
 			'irma'=>'',
 			'robert'=>'',
@@ -34,16 +34,16 @@ class UserIdentity extends CUserIdentity
 			'josef'=>'',
 			'admin'=>'',
 		);
-		if(!isset($users[$this->username]))
+		if(!isset($Users[$this->username]))
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
-			//elseif($users[$this->username]!==$this->password)
+			//elseif($Users[$this->username]!==$this->password)
 			//	$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else {
 			$this->errorCode=self::ERROR_NONE;
 			$userID = Yii::app()->db->createCommand()
 						->select('u.userID')
-						->from('users u')
-						->where('u.username=:username', array(':username'=>$this->name))
+						->from('Users u')
+						->where('u.username=:username', array(':username'=>strToLower($this->name)))
 						->queryRow();
 			$this->_id = $userID;
 		}

@@ -43,7 +43,9 @@ foreach($conversationPartners as $participant) {
 	<div class="jumbotron col-md-12 jumboheader">
 			<div class=row>
 				<div class="col-md-3">
-					<h2 style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?></h2>
+					<div class="well">
+						<h2 style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?></h2>
+					</div>
 				</div>
 				<div class="col-md-6 alert-info">
 					<h2 style="text-align:center">

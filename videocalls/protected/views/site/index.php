@@ -17,7 +17,9 @@ $cs->registerScriptFile($baseUrl.'/js/pollForNotifications.js');
 	<div class="jumbotron col-md-12 jumboheader">
 		<div class="row">
 			<div class="col-md-3">
-				<h2  style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?></h2>
+				<div class=well>
+					<h2  style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?></h2>
+				</div>
 			</div>
 			<div class="col-md-6 alert-info">
 				<h2 style="text-align:center">
@@ -31,9 +33,8 @@ $cs->registerScriptFile($baseUrl.'/js/pollForNotifications.js');
 				</h2>
 			</div>
 			<div class="col-md-3" style="margin-top: 12px; text-align:right;">
-					<a  type="button" class="btn btn-primary btn-lg" href='<?php echo $logoutLink; ?>';">Sie sind nicht <?php echo strToUpper(Yii::app()->user->name); ?>?&nbsp;<span style="cursor:pointer" class="glyphicon glyphicon-log-out" alt="Bye!"></span></a>
+					<a  type="button" class="btn btn-primary btn-lg" href='<?php echo $logoutLink; ?>';">Sie sind nicht <?php echo strToUpper(Yii::app()->user->name); ?>?</a>
 			</div>
-
 		</div>
 	</div>
 </div>
@@ -77,13 +78,14 @@ echo "</pre>";
 											echo "</p></div>";
 										echo "<div class='modal-footer call-modal-footer' style='text-align:center;'><p>";
 										if($colMdSize < 3) {
-											echo TbHtml::button(strToUpper($contact['contactName']['username'].' anrufen'), array(
+											echo TbHtml::button('Anrufen', array(
 												'color' => TbHtml::BUTTON_COLOR_PRIMARY,
+												'size' => TbHtml::BUTTON_SIZE_LARGE,
 												'data-toggle' => 'modal',
 												'data-target' => '#call'.$contact['contactName']['username'].'Modal',
 											));
 										} else {
-											echo TbHtml::button(strToUpper($contact['contactName']['username'].' anrufen'), array(
+											echo TbHtml::button('Anrufen', array(
 												'color' => TbHtml::BUTTON_COLOR_PRIMARY,
 												'size' => TbHtml::BUTTON_SIZE_LARGE,
 												'data-toggle' => 'modal',
