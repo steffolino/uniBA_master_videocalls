@@ -30,12 +30,14 @@ $(document).ready(function () {
 		markNotAsRejected(notID);
 		console.log("dismissed");
 	});
-	
+
+/*	
 	$("#goBackButton").on('click', function (e) {
 		e.preventDefault();
 		var notID = $("#rejectModal #hidden_notificationID").val();
 		markNotAsCompleted(notID);
 	});
+	*/
 });
 
 function hangUpTimeout () {

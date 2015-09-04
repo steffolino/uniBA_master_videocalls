@@ -36,7 +36,7 @@ $this->breadcrumbs=array(
 		<!-- Main Content -->
 		<div class="row buttons">
 			<div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-				<?php echo TbHtml::submitButton('Yes, that\'s me!', array('color'=> TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE, 'block'=>true)); ?>
+				<?php echo TbHtml::submitButton('Ja, das bin ich.', array('color'=> TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE, 'block'=>true)); ?>
 			</div>
 		</div>
 		

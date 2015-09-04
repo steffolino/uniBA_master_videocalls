@@ -5004,9 +5004,9 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
   color: inherit;
   background-color: #eee;
 }
@@ -5015,7 +5015,7 @@ a.badge:focus {
   color: inherit;
 }
 .jumbotron p {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-size: 21px;
   font-weight: 200;
 }
@@ -5031,13 +5031,13 @@ a.badge:focus {
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
@@ -5998,14 +5998,19 @@ button.close {
   text-align: right;
   border-top: 1px solid #e5e5e5;
 }
-.modal-footer .btn + .btn {
-  margin-bottom: 0;
-  margin-left: 5px;
+.call-modal-footer {
+  padding: 15px 0px 0px 0px !important;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
 }
-.modal-footer .btn-group .btn + .btn {
+.modal-footer .btn + .btn, .call-modal-footer .btn + .btn  {
+  margin-bottom: 0;
+  margin-left: 0px;
+}
+.modal-footer .btn-group .btn + .btn, .call-modal-footer .btn-group .btn + .btn {
   margin-left: -1px;
 }
-.modal-footer .btn-block + .btn-block {
+.modal-footer .btn-block + .btn-block ,.call-modal-footer .btn-block + .btn-block {
   margin-left: 0;
 }
 .modal-scrollbar-measure {

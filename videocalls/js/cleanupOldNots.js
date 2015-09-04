@@ -1,5 +1,5 @@
 
-var CLEANUPINTERVALTIME = 3000;
+var CLEANUPINTERVALTIME = 60000;
 
 $(document).ready(function () {
 

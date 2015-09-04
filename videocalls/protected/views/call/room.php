@@ -37,13 +37,20 @@ foreach($conversationPartners as $participant) {
 ?>
 <div id="opacLayer" class="modal fadein hidden" style="background-color:#222222;">
 </div>
+
 <!-- Header -->
 <div class=row>
-	<div class="jumbotron col-md-12 _col-md-offset-1 jumboheader">
-			<h2>Hello <?php echo Yii::app()->user->name; ?></h2>
-			<p class="lead">
-				Your are talking to <?php echo strtoupper($visavis->username); ?>
-			</p>
+	<div class="jumbotron col-md-12 jumboheader">
+			<div class=row>
+				<div class="col-md-3">
+					<h2 style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?></h2>
+				</div>
+				<div class="col-md-6 alert-info">
+					<h2 style="text-align:center">
+						Sie telefonieren mit <?php echo strtoupper($visavis->username); ?>
+					</h2>
+				</div>
+			</div>
 	</div>
 </div>
 <?php 
@@ -51,7 +58,7 @@ foreach($conversationPartners as $participant) {
 
 ?>
 <!-- Main -->
-<div class=row">
+<div class="row">
 	<div class="jumbotron col-md-12">
 		<div class="row">
 			<div class="col-md-12">
@@ -59,11 +66,11 @@ foreach($conversationPartners as $participant) {
 					<!--div id="videoLeft" class="col-md-2">
 						<p>test left</p>
 					</div-->
-					<div id="videoCenter" class="col-md-7">
+					<div id="videoCenter" class="col-md-6">
 						<video id="localVideo" height=auto width="100%"></video>
-						<div id="remoteVideos"></div>
+						<!--div id="remoteVideos"></div-->
 					</div>
-					<div id ="videoRight" class="col-md-5" style="background-color:#fefefe; height:100%; display:none;">
+					<div id ="videoRight" class="col-md-6" style="background-color:#fefefe; height:100%; display:none;">
 						<blockquote id="videoRight_infoText">
 						<?php
 							foreach ($visavis->ownUserStories as $userDescriptionClass) {
@@ -86,16 +93,16 @@ foreach($conversationPartners as $participant) {
 		<div class="jumbotron col-md-12 _col-md-offset-1">
 			<div class=row>
 				<div id="hangUpBtnDiv" class="col-md-4">
-					<div id="hangUpBtn" class="btn btn-lg btn-danger col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-phone-square"> Hang up</i></div>
+					<div id="hangUpBtn" class="btn btn-lg btn-danger col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-phone-square fa-rotate-180"></i><i class="fa fa-2x">&nbsp;Auflegen</i></div>
 				</div>
 				<div id="fullscreenBtnDiv" class="col-md-4">
-					<div id="fullscreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-arrows-alt"> Fullscreen</i></div>
+					<div id="fullscreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-arrows-alt"> Gro&szlig;es Bild</i></div>
 				</div>
 				<div id="smallScreenBtnDiv" class="col-md-4 hidden">
-					<div id="smallScreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-bars"> Smallscreen</i></div>
+					<div id="smallScreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-bars"> Kleines Bild</i></div>
 				</div>
 				<div id="infoBtnDiv" class="col-md-4">
-					<div id="infoBtn" class="btn btn-lg btn-success col-md-10 col-md-offset-1" style="cursor:pointer"><i style="aling:center" class="fa fa-2x fa-info-circle"> Info</i></div>
+					<div id="infoBtn" class="btn btn-lg btn-success col-md-10 col-md-offset-1" style="cursor:pointer"><i style="aling:center" class="fa fa-2x fa-info-circle"> Spickzettel</i></div>
 				</div>
 			</div>
 		</div>
@@ -139,13 +146,13 @@ $(document).ready(function() {
 	
 	$("#fullscreenBtn").on('click', function () {
 		console.log("fullscreen");
-		$("#videoCenter").removeClass('col-md-7'); // standard
+		$("#videoCenter").removeClass('col-md-6'); // standard
 		$("#videoCenter").addClass('col-md-10 col-md-offset-1'); // standard
 		$("#smallScreenBtnDiv").removeClass('hidden col-md-4');
 		$("#smallScreenBtnDiv").addClass('col-md-6');
 		$("#hangUpBtnDiv").removeClass('col-md-4');
 		$("#hangUpBtnDiv").addClass('col-md-6');
-		$("#fullscreenBtnDiv").addClass('hidden');		
+		$("#fullscreenBtnDiv").addClass('hidden');
 		$("#infoBtnDiv").addClass('hidden');		
 		$("#localVideo").css({'height': '100%'});
 		$(".jumboheader").addClass('hidden');
@@ -158,7 +165,7 @@ $(document).ready(function() {
 	});
 	
 	$("#smallScreenBtn").on('click', function () {
-		$("#videoCenter").addClass('col-md-7'); // standard
+		$("#videoCenter").addClass('col-md-6'); // standard
 		$("#videoCenter").removeClass('col-md-10 col-md-offset-1'); // standard
 		$("#smallScreenBtnDiv").addClass('hidden col-md-4');
 		$("#smallScreenBtnDiv").removeClass('col-md-6');

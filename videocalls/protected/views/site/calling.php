@@ -14,17 +14,35 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
     var js_username = "<?php echo Yii::app()->user->name ?>";
 </script>
 
+<!--div class=row>
+	<div class="jumbotron col-md-12 jumboheader">
+			<div class=row>
+				<div class="col-md-3">
+					<h2>Hello <?php //echo Yii::app()->user->name; ?></h2>
+				</div>
+				<div class="col-md-6 alert-info">
+					<h2 style="text-align:center">
+						You are talking to <?php //echo strtoupper($visavis->username); ?>
+					</h2>
+				</div>
+			</div>
+	</div>
+</div-->
+
+
 <!-- Header -->
 <div class=row>
 	<div class="jumbotron col-md-12 _col-md-offset-1 jumboheader">
 			<div class=row>
-				<h2>Hello <?php echo Yii::app()->user->name; ?></h2>
-				<p>
-					<?php 
-						echo "We are waiting for ".strtoupper($invitee->username)." to answer the call ..."; 
-					?>
-				</p>
-		</div>
+				<div class="col-md-3">
+					<h2  style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?></h2>
+				</div>
+				<div class="col-md-6 alert-info">
+					<h2 style="text-align:center">
+						Wir warten bis <?php echo strtoupper($invitee->username); ?> den Anruf beantwortet
+					</h2>
+				</div>
+			</div>
 	</div>
 </div>
 <?php
@@ -36,30 +54,36 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 	*/
 ?>
 <!-- Main -->
-<div class=row">
+<div class="row">
 	<div class="jumbotron col-md-12 _col-md-offset-1">
-		<p class=lead>
-		While waiting ...
-		</p>
+		<h3>
+			W&auml;hrend wir warten, wussten Sie das schon &uuml;ber <?php echo strToUpper($invitee->username); ?>?
+		</h3>
 		<br/>
 		<div class=row>
 			<!-- Carousel START-->
 				  <?php
 						  for ($i = 0; $i < sizeOf($invitee->ownUserStories); $i++) {
-							echo  "<div class='media'>
-								<a class='pull-left' href='#'>
-									<img class='media-object img-circle' style='max-height:120px;' src='images/userImages/user" . $invitee->userID . ".jpg'>
-								</a>
-								<div class='media-body'>
-									<h3 class='media-heading'>Did you know about ".$invitee->username."?</h3>
-									<p>". $invitee->ownUserStories[$i]->userStory. "</p>
-								</div>
-							</div>";
+							echo  "								
+							<div class=row>
+								<div class='col-md-10 col-md-offset-1'>
+									<div class='media' style='margin-bottom:20px;'>
+										<a class='pull-left'>
+											<img class='media-object img-circle' style='max-height:120px;' src='images/userImages/user" . $invitee->userID . ".jpg'>
+										</a>
+											<div class='media-body'>
+												<!--h3 class='media-heading'>Did you know about ".$invitee->username."?</h3-->
+												<h3>". strToUpper($invitee->username)." ". $invitee->ownUserStories[$i]->userStory. "</h3>
+											</div>
+										</div>
+									</div>
+								</div>";
 							}
 					?>
 				<!-- Carousel END-->
 		</div>
 	</div>
+</div>
 	
 	<!-- START OF Answer Modal -->
 	<div class="modal fade" id="answerModal">
@@ -67,14 +91,14 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title">Call Answered</h4>
+			<h4 class="modal-title">Anruf beantwortet</h4>
 		  </div>
 		  <div class="modal-body">
-			<p id="answerText"><?php echo $invitee->username; ?> answered your call and is waiting for you to join.</p>
+			<p id="answerText"><?php echo strToUpper($invitee->username); ?> hat Ihren Anruf beantwortet und wartet auf Sie</p>
 		  </div>
 		  <div class="modal-footer">
-			<a id="cancelCallButton" href="<?php echo Yii::app()->createUrl('site/index'); ?>" id="rejectButton" type="button" class="btn btn-cancel" data-dismiss="modal">Cancel Call</a>
-			<a id="goToCallButton" href="<?php echo Yii::app()->createUrl('call/room', array('host'=> $notification->inviterID, 'guest' => $notification->userID)); ?>" id="answerButton" type="submit" class="btn btn-primary">Go To Call</a>
+			<!--a id="cancelCallButton" href="<?php //echo Yii::app()->createUrl('site/index'); ?>" id="rejectButton" type="button" class="btn btn-cancel" data-dismiss="modal">Abbrechen und zur&uuml;ck</a-->
+			<a id="goToCallButton" href="<?php echo Yii::app()->createUrl('call/room', array('host'=> $notification->inviterID, 'guest' => $notification->userID)); ?>" id="answerButton" type="submit" class="btn btn-primary">Zum Telefonat</a>
 			<input id="hidden_notificationID" value="<?php echo $notification->notID; ?>" type=hidden />
 		  </div>
 		</div><!-- /.modal-content -->
@@ -88,13 +112,13 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title">Call Answered</h4>
+			<h4 class="modal-title">Anruf abgewiesen</h4>
 		  </div>
 		  <div class="modal-body">
-			<p id="rejectText"> <?php echo $invitee->username; ?> rejected your call</p>
+			<p id="rejectText"> <?php echo $invitee->username; ?> hat Ihren Anruf abgewiesen</p>
 		  </div>
 		  <div class="modal-footer">
-			<a id="goBackButton" href="<?php echo Yii::app()->createUrl('site/index'); ?>" type="submit" class="btn btn-primary">Ok, go back</a>
+			<a id="goBackButton" href="<?php echo Yii::app()->createUrl('site/index'); ?>" type="submit" class="btn btn-primary">OK, zurück zum Start</a>
 			<input value="<?php echo $notification->notID; ?>" id="hidden_notificationID" type=hidden />			
 		  </div>
 		</div><!-- /.modal-content -->
@@ -108,13 +132,13 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 		<div class="modal-content">
 		  <div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title">Call Not Answered</h4>
+			<h4 class="modal-title">Anruf wurde nicht beantwortet</h4>
 		  </div>
 		  <div class="modal-body">
-			<p id="rejectText"> <?php echo $invitee->username; ?> does not answer your call</p>
+			<p id="rejectText"> <?php echo $invitee->username; ?> antwortet nicht.</p>
 		  </div>
 		  <div class="modal-footer">
-			<a id="goBackButton" href="<?php echo Yii::app()->createUrl('site/index'); ?>" type="submit" class="btn btn-primary">Ok, hang up!</a>
+			<a id="goBackButton" href="<?php echo Yii::app()->createUrl('site/index'); ?>" type="submit" class="btn btn-primary">OK, zurück zum Start</a>
 			<input value="<?php echo $notification->notID; ?>" id="hidden_notificationID" type=hidden />			
 		  </div>
 		</div><!-- /.modal-content -->

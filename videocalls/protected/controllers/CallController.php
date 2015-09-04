@@ -9,15 +9,14 @@ Class CallController extends Controller
 {
 	public function actionMarkNotAsCompleted() {
 		if(!empty($_GET['notID'])) {
-
-			$criteria = new CDbCriteria();
-			$criteria->condition = 'notID=:notificationID';
-			$criteria->params = array('notificationID' => $_GET['notID']);
-				
-			$notification = UserNotifications::model()->find($criteria);
+			
+			$notID = htmlspecialchars($_GET['notID']);
+			
+			$notification = UserNotifications::model()->getNotificationByID($notID);
 
 			$notification->notCompleted = true;
 			$notification->save();
+
 			echo $notification->notID;
 			
 		} else {
@@ -27,15 +26,12 @@ Class CallController extends Controller
 	
 	public function actionSetInvitationToRejected() {
 		if(!empty($_GET['notID'])) {
-			$criteria = new CDbCriteria();
-			$criteria->condition = 'notID=:notificationID';
-			$criteria->params = array('notificationID' => $_GET['notID']);
-				
-			$notification = UserNotifications::model()->find($criteria);
+			
+			$notID = htmlspecialchars($_GET['notID']);
 
+			$notification = UserNotifications::model()->getNotificationByID($notID);
 			$notification->notAnswer = 'no';
 			$notification->save();
-
 			echo $notification->notID;
 
 		} else {
@@ -45,14 +41,12 @@ Class CallController extends Controller
 	
 	public function actionSetInvitationToAccepted() {
 		if(!empty($_GET['notID'])) {
-			$criteria = new CDbCriteria();
-			$criteria->condition = 'notID=:notificationID';
-			$criteria->params = array('notificationID' => $_GET['notID']);
-				
-			$notification = UserNotifications::model()->find($criteria);
+
+			$notID = htmlspecialchars($_GET['notID']);
+
+			$notification = UserNotifications::model()->getNotificationByID($notID);
 			$notification->notAnswer = 'yes';
 			$notification->save();
-
 			echo $notification->notID;
 
 		} else {
@@ -68,23 +62,22 @@ Class CallController extends Controller
 	public function actionPollNotificationsInvitee () 
 	{			
 			//TODO: move to model
-			$result = Yii::app()->db->createCommand()
+			$currentUserID = Users::model()->getUserIDByName(Yii::app()->user->name);
+			
+			
+/*			$result = Yii::app()->db->createCommand()
 				->select('u.userID')
 				->from('users u')
 				->where('u.username=:username', array(':username'=>Yii::app()->user->name))
 				->queryRow();
-						
-			if(!empty($result['userID'])) {
-								
-				$criteria = new CDbCriteria();
-				$criteria->condition = 'userID=:currentUserID AND notAnswer = "unread" AND notCompleted = 0';
-				$criteria->params = array(':currentUserID' => $result['userID']);
+*/						
+			if(!empty($currentUserID)) {
 				
-				$notification = UserNotifications::model()->find($criteria);
+				$notification = UserNotifications::model()->pollForUnreadNots($currentUserID);				
 					
 				if(!empty($notification)) {
 					$notJSON = CJSON::encode($notification);
-					$notResponseTimeout = CJSON::encode($responseTimeout);
+					//$notResponseTimeout = CJSON::encode($responseTimeout);
 					//echo "<a id='invitationLink' href='".$notification->notLink."'>".$notification->notText."</a>";
 					echo $notJSON; //+ $notResponseTimeout;
 				} else {
@@ -105,12 +98,8 @@ Class CallController extends Controller
 	{			
 		if(!empty($_GET['inviteeID'])) {
 			$inviteeID = $_GET['inviteeID'];
-
-			$criteria = new CDbCriteria();
-			$criteria->condition = 'userID=:inviteeID AND notAnswer != "unread" AND notCompleted = 0';
-			$criteria->params = array('inviteeID' => $inviteeID);
 				
-			$notification = UserNotifications::model()->find($criteria);
+			$notification = UserNotifications::model()->pollForAnsweredNots($inviteeID);
 					
 			if(!empty($notification)) {
 				$notJSON = CJSON::encode($notification);
@@ -137,27 +126,17 @@ Class CallController extends Controller
 		$inviteeID = Yii::app()->getRequest()->getParam('contactID');	
 		//$notification = UserNotifications::model()->find(array('condition'=>'userID=:inviteeID', 'params'=>array(':inviteeID'=>$inviteeID)));
 
-		$userName = Yii::app()->user->name;
-		$criteria = new CDbCriteria();
-		$criteria->condition = 't.username=:currentUserName';
-		$criteria->params = array(':currentUserName' => $userName);
-		$currentUser = Users::model()->with(
-					'ownUserStories'
-			)->find($criteria);
-
+		$currentUser = Users::model()->getUserStoriesByName(Yii::app()->user->name);
 		
+		//TODO: move to model
 		$notification = new UserNotifications;
 		$notification->userID = $inviteeID;
-		$notification->notText = 'You are invited to answer the call by '.Yii::app()->user->name;
+		$notification->notText = 'Sie werden von '.Yii::app()->user->name . 'angerufen';
 		$notification->notLink = Yii::app()->createUrl('call/room', array('host'=> $currentUser->userID, 'guest' => $inviteeID));
 		$notification->inviterID = $currentUser->userID;
 		$notification->save();
-		
-		$criteria = new CDbCriteria();
-		$criteria->condition = 'userID=:inviteeID';
-		$criteria->params = array('inviteeID' => $inviteeID);
-					
-		$invitee = Users::model()->find($criteria);
+							
+		$invitee = Users::model()->getUserStoriesByID($inviteeID);
 				
 		$this->render('//site/calling', array('invitee'=>$invitee, 'notification' => $notification));			
 	}
@@ -167,14 +146,11 @@ Class CallController extends Controller
 	*/
 	public function actionRoom () {
 		if(isset($_GET['host']) && isset($_GET['guest'])) {
+
 			$guestID = htmlspecialchars($_GET['guest']);
 			$hostID = htmlspecialchars($_GET['host']);
 
-			$criteria = new CDbCriteria();
-			$criteria->condition = 't.userID=:guestID OR t.userID=:hostID';
-			$criteria->params = array(':guestID' => $guestID, ':hostID'=>$hostID);
-			
-			$conversationPartners = Users::model()->with('ownUserStories')->findAll($criteria);
+			$conversationPartners = Users::model()->gatherCallPartnersStories($guestID, $hostID);
 			
 			if(!empty($conversationPartners)) {
 				$this->render('room', array('conversationPartners' => $conversationPartners));
@@ -214,7 +190,6 @@ Class CallController extends Controller
 		}
 		
 		echo "Cleaned ".$cleanupCounter . " notifications"; 
-
 
 	}
 
