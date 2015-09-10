@@ -9,8 +9,22 @@ $this->breadcrumbs=array(
 );
 ?>
 <!--HEader -->
+<!-- Header -->
 <div class=row>
-	<h1>Login</h1>
+	<div class="jumbotron col-md-12 jumboheader">
+		<div class="row">
+			<div class="col-md-3">
+				<div class=well>
+					<h2  style="text-align:center;">Hallo</h2>
+				</div>
+			</div>
+			<div class="col-md-6 alert-info">
+				<h2 style="text-align:center">
+					Bitte geben Sie Ihren Namen ein.
+				</h2>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- Main -->

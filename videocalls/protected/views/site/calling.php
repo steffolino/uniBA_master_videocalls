@@ -47,46 +47,101 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 			</div>
 	</div>
 </div>
+
 <?php
-	/*
-	echo "<pre>";
-	var_dump($invitee->ownUserStories[0]->userStory);
-	echo sizeOf($invitee->ownUserStories);
-	echo "</pre>";
-	*/
+
+$this->widget ( 'ext.mediaElement.MediaElementPortlet',
+    array ( 
+	'id' => 'mediaPlayer',
+    'url' => 'http://mp3.ffh.de/ffhchannels/hqschlager.mp3',
+	// or you can set the model and attributes
+    //'model' => $model,
+    //'attribute' => 'url'
+	// its required and so you have to set correctly
+     'mimeType' =>'audio/mp3', 
+	 'htmlOptions' => array(
+		'id' => 'mediaPlayer',
+		'display' => 'none',
+		),
+    ));	
 ?>
-<!-- Main -->
-<div class="row">
-	<div class="jumbotron col-md-12 _col-md-offset-1">
-		<h3>
-			W&auml;hrend wir warten, wussten Sie das schon &uuml;ber <?php echo strToUpper($invitee->username); ?>?
-		</h3>
-		<br/>
-		<div class=row>
-			<!-- Carousel START-->
-				  <?php
-						  for ($i = 0; $i < sizeOf($invitee->ownUserStories); $i++) {
-							echo  "								
-							<div class=row>
-								<div class='col-md-10 col-md-offset-1'>
-									<div class='media' style='margin-bottom:20px;'>
-										<a class='pull-left'>
-											<img class='media-object img-circle' style='max-height:120px;' src='images/userImages/user" . $invitee->userID . ".jpg'>
-										</a>
-											<div class='media-body'>
-												<!--h3 class='media-heading'>Did you know about ".$invitee->username."?</h3-->
-												<h3>". strToUpper($invitee->username)." ". $invitee->ownUserStories[$i]->userStory. "</h3>
+	<script>
+		$(document).ready(function () {
+			$(".mejs-container").hide();
+		});
+	</script>
+
+<!-- Main Showing Textual Information on Invitee-->
+<?php if(empty($_GET['slideshow'])) {
+	echo "<div class='row'>
+		<div class='jumbotron col-md-12 _col-md-offset-1'>
+			<h3 style='text-align:center;'>
+				W&auml;hrend wir warten, wussten Sie das schon &uuml;ber ". strToUpper($invitee->username) ."?
+			</h3>
+			<br/>
+			<div class=row>";
+				echo "<!-- Carousel START-->";
+								echo  "								
+								<div class=row>
+									<div class='col-md-10 col-md-offset-1'>
+										<div class='media' style='margin-bottom:20px;'>
+											<a class='pull-left'>
+												<img class='media-object img-circle' style='max-height:280px;' src='images/userImages/user" . $invitee->userID . ".jpg'>
+											</a>
+												<div class='media-body'>
+													<blockquote id='videoRight_infoText'>";
+													for ($i = 0; $i < sizeOf($invitee->ownUserStories); $i++) {
+													echo "<!--h3 class='media-heading'>Did you know about ".$invitee->username."?</h3-->
+													<h3>". strToUpper($invitee->username)." ". $invitee->ownUserStories[$i]->userStory. "</h3>";
+													}
+													echo "</blockquote>";
+											echo "</div>
 											</div>
 										</div>
-									</div>
-								</div>";
-							}
-					?>
-				<!-- Carousel END-->
+									</div>";
+		echo"			<!-- Carousel END-->
+			</div>
 		</div>
-	</div>
-</div>
-	
+	</div>";
+} else {
+	echo "<div class='row'>
+		<div class='jumbotron col-md-12 _col-md-offset-1'>
+			<h3>
+				W&auml;hrend wir warten, erinnern Sie sich an ... ?
+			</h3>
+			<br/>
+			<div class=row>
+			<div class='col-md-8 col-md-offset-2'>";
+				echo "<!-- Carousel START-->";
+				    $this->widget(
+						'booster.widgets.TbCarousel',
+						array(
+							'options' => array(
+								'interval' => 15000,
+							),
+							'items' => array(
+								array(
+									'image' => ('images/remPhotos/user1/image01.jpg'),
+									'caption' => 'Die Besuche in der Eisdiele mit Ihrer Cousine Elke'
+								),
+								array(
+									'image' => ('images/remPhotos/user1/image02.jpg'),
+									'caption' => 'Onkel Herbert\'s 80. Geburtstag als Sie zu viel Kuchen gegessen haben'
+								),
+								array(
+									'image' => ('images/remPhotos/user1/image03.jpg'),
+									'caption' => 'Die Feier der Sportmannschft als Sie Ihren Mann kennengelernt haben'
+								),
+							),
+						)
+					);
+		echo"			<!-- Carousel END-->
+				</div>
+			</div>
+		</div>
+	</div>";
+}
+?>	
 	<!-- START OF Answer Modal -->
 	<div class="modal fade" id="answerModal">
 	  <div class="modal-dialog">

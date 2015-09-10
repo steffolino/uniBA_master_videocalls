@@ -24,6 +24,12 @@ class UserIdentity extends CUserIdentity
 	 
 	public function authenticate()
 	{
+	$usersAR = Users::model()->getAllUsers();
+//		var_dump ($usersAR);
+		$Users = array();
+		foreach ($usersAR as $user) {
+			$Users[$user->username] = '';
+		}/*
 		$Users=array(
 			// username => password
 			'irma'=>'',
@@ -34,11 +40,13 @@ class UserIdentity extends CUserIdentity
 			'josef'=>'',
 			'admin'=>'',
 		);
-		if(!isset($Users[$this->username]))
+*/		
+		if(!isset($Users[strToLower($this->username)])) {
+			echo "Username is not set: " . strToLower($this->username);
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 			//elseif($Users[$this->username]!==$this->password)
 			//	$this->errorCode=self::ERROR_PASSWORD_INVALID;
-		else {
+		} else {
 			$this->errorCode=self::ERROR_NONE;
 			$userID = Yii::app()->db->createCommand()
 						->select('u.userID')
@@ -50,7 +58,4 @@ class UserIdentity extends CUserIdentity
 		return !$this->errorCode;
 	}
 	
-	public function getUserID () {
-		
-	}
 }

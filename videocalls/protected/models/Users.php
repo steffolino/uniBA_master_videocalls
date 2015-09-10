@@ -36,6 +36,12 @@ class Users extends CActiveRecord {
 			)->findAll($criteria);
 
 	}
+	
+	public function getAllUsers () {
+		
+		return $this->findAll();
+			
+	}
 
 	public function getUserIDByName ($userName) {
 		$userName = Yii::app()->user->name;

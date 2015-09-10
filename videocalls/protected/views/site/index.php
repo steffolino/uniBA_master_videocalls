@@ -33,7 +33,9 @@ $cs->registerScriptFile($baseUrl.'/js/pollForNotifications.js');
 				</h2>
 			</div>
 			<div class="col-md-3" style="margin-top: 12px; text-align:right;">
-					<a  type="button" class="btn btn-primary btn-lg" href='<?php echo $logoutLink; ?>';">Sie sind nicht <?php echo strToUpper(Yii::app()->user->name); ?>?</a>
+				<div class=well>
+					<a  type="button" class="btn btn-primary btn-lg" href='<?php echo $logoutLink; ?>'>Sie sind nicht <?php echo strToUpper(Yii::app()->user->name); ?>?</a>
+				</div>
 			</div>
 		</div>
 	</div>
