@@ -19,6 +19,8 @@ class Users extends CActiveRecord {
         return array(
 			'ownUserStories' => array(self::HAS_MANY, 'UserDescriptions', array('userID'=>'userID')),
 			'contacts' => array(self::HAS_MANY, 'UserContacts', array('userID'=>'userID')),
+			'userMusic' => array(self::HAS_ONE, 'UserMusic', array('userID' => 'userID')),
+			'userImages' => array(self::HAS_ONE, 'UserImages', array('userID' => 'userID')),
         );
     }
 	
@@ -76,6 +78,43 @@ class Users extends CActiveRecord {
 		$criteria->params = array(':userID' => $userID);
 		
 		$result =	$this->with('ownUserStories')->find($criteria);
+			
+		return $result;
+
+	}
+
+	public function getUserStoriesAndMusicByID ($userID) {
+		$userName = Yii::app()->user->name;
+
+		$criteria = new CDbCriteria();
+		$criteria->condition = 't.userID=:userID';
+		$criteria->params = array(':userID' => $userID);
+		
+		$result =	$this->with(
+			array(
+				'ownUserStories',
+				'userMusic',
+				)
+		)->find($criteria);
+			
+		return $result;
+
+	}
+	
+	public function getUserStoriesAndMusicAndImagesByID ($userID) {
+		$userName = Yii::app()->user->name;
+
+		$criteria = new CDbCriteria();
+		$criteria->condition = 't.userID=:userID';
+		$criteria->params = array(':userID' => $userID);
+		
+		$result =	$this->with(
+			array(
+				'ownUserStories',
+				'userMusic',
+				'userImages',
+				)
+		)->find($criteria);
 			
 		return $result;
 

@@ -131,12 +131,12 @@ Class CallController extends Controller
 		//TODO: move to model
 		$notification = new UserNotifications;
 		$notification->userID = $inviteeID;
-		$notification->notText = 'Sie werden von '.Yii::app()->user->name . 'angerufen';
+		$notification->notText = strToUpper(Yii::app()->user->name) . ' ruft Sie an';
 		$notification->notLink = Yii::app()->createUrl('call/room', array('host'=> $currentUser->userID, 'guest' => $inviteeID));
 		$notification->inviterID = $currentUser->userID;
 		$notification->save();
 							
-		$invitee = Users::model()->getUserStoriesByID($inviteeID);
+		$invitee = Users::model()->getUserStoriesAndMusicAndImagesByID($inviteeID);
 				
 		$this->render('//site/calling', array('invitee'=>$invitee, 'notification' => $notification));			
 	}

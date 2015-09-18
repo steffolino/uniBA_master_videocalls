@@ -11,11 +11,12 @@ Yii::app()->clientScript->registerScriptFile(
 	//'http://simplewebrtc.com/latest.js'
 );
 */
-
+/*
 	$baseUrl = Yii::app()->baseUrl; 
 	$cs = Yii::app()->getClientScript();
-	$cs->registerScriptFile($baseUrl.'/js/Fullscreen/jquery.fullscreen-min.js');
-	$cs->registerScriptFile($baseUrl.'/js/SimpleWebRTC/simplewebrtc-latest.js');
+	//$cs->registerScriptFile($baseUrl.'/js/Fullscreen/jquery.fullscreen-min.js');
+//	$cs->registerScriptFile($baseUrl.'/js/SimpleWebRTC/simplewebrtc.bundle.js');
+*/
 ?>
 
 <?php
@@ -40,19 +41,9 @@ foreach($conversationPartners as $participant) {
 
 <!-- Header -->
 <div class=row>
-	<div class="jumbotron col-md-12 jumboheader">
-			<div class=row>
-				<div class="col-md-3">
-					<div class="well">
-						<h2 style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?></h2>
-					</div>
-				</div>
-				<div class="col-md-6 alert-info">
-					<h2 style="text-align:center">
-						Sie telefonieren mit <?php echo strtoupper($visavis->username); ?>
-					</h2>
-				</div>
-			</div>
+	<div id="jumboHeader" class="alert alert-info col-md-12 well">
+		<h4 style="text-align:center;"> Hallo <?php echo strToUpper(Yii::app()->user->name); ?>. Sie telefonieren mit <?php echo strtoupper($visavis->username); ?>
+		</h4>
 	</div>
 </div>
 <?php 
@@ -69,14 +60,15 @@ foreach($conversationPartners as $participant) {
 						<p>test left</p>
 					</div-->
 					<div id="videoCenter" class="col-md-6">
-						<video id="localVideo" height=auto width="100%"></video>
-						<!--div id="remoteVideos"></div-->
+						<!--video id="localVideo" style="display:hidden;" height="400px" width="100%"></video-->
+						<div height:="400px" id="remotes" class="col-md-12"></div>
 					</div>
-					<div id ="videoRight" class="col-md-6" style="background-color:#fefefe; height:100%; display:none;">
+						<!--div id="remoteVideos" height="320px" width="75%"></div-->
+					<div id ="videoRight" class="col-md-6 pull-right" style="background-color:#fefefe; color:#111111; height:100%; display:none;">
 						<blockquote id="videoRight_infoText">
 						<?php
 							foreach ($visavis->ownUserStories as $userDescriptionClass) {
-								echo "<p>".$userDescriptionClass->userStory."</p>";	
+								echo "<p class='spickerP' style='font-size:24px'>".$userDescriptionClass->userStory."</p>";	
 							}
 						?>
 						</blockquote>
@@ -88,29 +80,44 @@ foreach($conversationPartners as $participant) {
 </div>		
 
 
-
-
 <!-- Footer -->
 <div id="room_footer" class=row>
 		<div class="jumbotron col-md-12 _col-md-offset-1">
 			<div class=row>
 				<div id="hangUpBtnDiv" class="col-md-4">
-					<div id="hangUpBtn" class="btn btn-lg btn-danger col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-phone-square fa-rotate-180"></i><i class="fa fa-2x">&nbsp;Auflegen</i></div>
+					<div id="hangUpBtn" class="btn btn-lg btn-danger col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-lg fa-phone-square fa-rotate-180"></i>&nbsp;Auflegen</div>
 				</div>
 				<div id="fullscreenBtnDiv" class="col-md-4">
-					<div id="fullscreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-arrows-alt"> Gro&szlig;es Bild</i></div>
+					<div id="fullscreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-lg fa-arrows-alt"></i> Gro&szlig;es Bild</div>
 				</div>
 				<div id="smallScreenBtnDiv" class="col-md-4 hidden">
-					<div id="smallScreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-2x fa-bars"> Kleines Bild</i></div>
+					<div id="smallScreenBtn" class="btn btn-lg btn-primary col-md-10 col-md-offset-1" style="cursor:pointer"><i class="fa fa-lg fa-bars"></i> Kleines Bild</div>
 				</div>
 				<div id="infoBtnDiv" class="col-md-4">
-					<div id="infoBtn" class="btn btn-lg btn-success col-md-10 col-md-offset-1" style="cursor:pointer"><i style="aling:center" class="fa fa-2x fa-info-circle"> Spickzettel</i></div>
+					<div id="infoBtn" class="btn btn-lg btn-success col-md-10 col-md-offset-1" style="cursor:pointer"><i style="align:center" class="fa fa-lg fa-info-circle"></i> Spickzettel</div>
 				</div>
 			</div>
 		</div>
 </div>	
 
 <style>
+.localVideo {
+	display:none;
+}
+video {
+	width:100%;
+}
+.spickerP {
+	transition:  all 0.2s ease-in;
+	-webkit-transition: all 0.2s ease-in;
+}
+.spickerP:focus, .spickerP:hover {
+	font-size: 32px;
+	font-weight: 500;
+	background-color: #dedede;
+	padding-left: 5px;
+}
+
 .footFully {
 	left: 13.5%;
 	padding: 5px 0px;
@@ -157,7 +164,8 @@ $(document).ready(function() {
 		$("#fullscreenBtnDiv").addClass('hidden');
 		$("#infoBtnDiv").addClass('hidden');		
 		$("#localVideo").css({'height': '100%'});
-		$(".jumboheader").addClass('hidden');
+		$("#remotes").css({'height': '100%'});
+		$("#jumboHeader").hide().addClass('hidden');
 		$("#room_footer").addClass('footFully');
 		$("#videoRight").addClass('hidden');
 		$(".jumbotron").addClass('jumboFully');
@@ -174,9 +182,10 @@ $(document).ready(function() {
 		$("#hangUpBtnDiv").addClass('col-md-4');
 		$("#hangUpBtnDiv").removeClass('col-md-6');
 		$("#fullscreenBtnDiv").removeClass('hidden');		
-		$("#infoBtnDiv").removeClass('hidden');		
-		$("#localVideo").css({'height': 'auto'});
-		$(".jumboheader").removeClass('hidden');
+		$("#infoBtnDiv").removeClass('hidden');	
+		//$("#localVideo").css({'height': '320px'});
+		$("#remotes").css({'height': '400px'});
+		$("#jumboHeader").show().removeClass('hidden');
 		$("#room_footer").removeClass('footFully');
 		$("#videoRight").removeClass('hidden');
 		$(".jumbotron").removeClass('jumboFully');
@@ -200,8 +209,42 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+</script>
+		<!-- XIRSYS STUFF FOR WEBRTC -->
+        <script src="js/xsdk-master/thirdparty/simplewebrtc.bundle.js"></script>
+        <script src="js/xsdk-master/examples/xirsys_connect.js"></script>
+        <script src="js/xsdk-master/lib/xirsys.core.js"></script>
+        <script src="js/xsdk-master/lib/xirsys.api.js"></script>
+        <script src="js/xsdk-master/lib/xirsys.simplewebrtc.js"></script>
+        <script>
+            // create our webrtc connection
 
-var webrtc = new SimpleWebRTC({
+	var roomHost = getUrlParameter('host');
+	var roomGuest = getUrlParameter('guest');
+	var roomName = roomHost+roomGuest;
+
+			
+            var webrtc = (xirsysConnect.secure === true)
+                ? new $xirsys.simplewebrtc(xirsysConnect.token_url, xirsysConnect.ice_url, xirsysConnect.room_url)
+                : new $xirsys.simplewebrtc();
+			console.log("connectState: "+xirsysConnect.secure);
+            var connectionProperties = xirsysConnect.data;
+			console.log(xirsysConnect.data);
+            webrtc.connect(
+                connectionProperties,
+                {
+                    localVideoEl: 'localVideo', // the id/dom element to hold "our" video
+                    remoteVideosEl: 'remoteVideos', // the id/dom element to hold remote videos // Should this be 'remotes' instead?
+                    autoRequestMedia: true, // immediately ask for camera access
+                    debug: false,
+                    detectSpeakingEvents: false,
+                    autoAdjustMic: false
+                }
+            );
+
+
+//OLD below
+/*var webrtc = new SimpleWebRTC({
     // the id/element dom element that will hold "our" video
     localVideoEl: 'localVideo',
     // the id/element dom element that will hold remote videos
@@ -209,16 +252,51 @@ var webrtc = new SimpleWebRTC({
     // immediately ask for camera access
     autoRequestMedia: true
 });
+*/
+	// we have to wait until it's ready
+	webrtc.on('readyToCall', function () {
+		// you can name it anything
+		console.log('joining room: videocalls-room');
+		//not working when entering numbers --> constant name --> only 1 connection at a time
+		if (roomName) webrtc.joinRoom('videocalls-room');
+	});
 
-var roomHost = getUrlParameter('host');
-var roomGuest = getUrlParameter('guest');
-var roomName = roomHost+roomGuest;
+     webrtc.on('videoAdded', function (video, peer) {
+			console.log('video added', peer);
+			 var remotes = document.getElementById('remotes');
+			 if (remotes) {
+				 var d = document.createElement('div');
+				 d.className = 'videoContainer col-md-12';	
+				 d.id = 'container_' + webrtc.getDomId(peer);
+				 d.appendChild(video);
+				 video.onclick = function () {
+					 video.style.width = (video.videoWidth * 0.5) + 'px';
+					 video.style.height = (video.videoHeight * 0.5) + 'px';
+				 };
+				 remotes.appendChild(d);
+			 }
+     });
+     webrtc.on('videoRemoved', function (video, peer) {
+         console.log('video removed ', peer);
+         var remotes = document.getElementById('remotes');
+         var el = document.getElementById('container_' + webrtc.getDomId(peer));
+         if (remotes && el) {
+             remotes.removeChild(el);
+         }
+     });
 
-// we have to wait until it's ready
-webrtc.on('readyToCall', function () {
-    // you can name it anything
-    webrtc.joinRoom(roomName);
-});
+	 // local p2p/ice failure
+	webrtc.on('iceFailed', function (peer) {
+		var pc = peer.pc;
+		console.log('had local relay candidate', pc.hadLocalRelayCandidate);
+		console.log('had remote relay candidate', pc.hadRemoteRelayCandidate);
+	});
 
-
+	// remote p2p/ice failure
+	webrtc.on('connectivityError', function (peer) {
+		var pc = peer.pc;
+		console.log('had local relay candidate', pc.hadLocalRelayCandidate);
+		console.log('had remote relay candidate', pc.hadRemoteRelayCandidate);
+	});
+	 
 </script>

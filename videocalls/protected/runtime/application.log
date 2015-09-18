@@ -8505,3 +8505,797 @@ Stack trace:
 REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=2
 HTTP_REFERER=http://localhost/yii/videocalls/index.php?r=site/index
 ---
+2015/09/14 14:51:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/14 14:53:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/14 15:04:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/14 15:05:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/14 15:06:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/14 15:07:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/14 15:08:45 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/14 15:11:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/14 15:36:07 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(163): renderAttributes()
+#1 C:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(501): tag()
+#2 C:\xampp\htdocs\yii\videocalls\protected\extensions\bootstrap\helpers\TbHtml.php(3127): htmlButton()
+#3 C:\xampp\htdocs\yii\videocalls\protected\extensions\bootstrap\helpers\TbHtml.php(3077): createButton()
+#4 C:\xampp\htdocs\yii\videocalls\protected\extensions\bootstrap\helpers\TbHtml.php(2915): btn()
+#5 C:\xampp\htdocs\yii\videocalls\protected\extensions\bootstrap\helpers\TbHtml.php(2904): htmlButton()
+#6 C:\xampp\htdocs\yii\videocalls\protected\views\site\index.php(103): button()
+#7 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(869): SiteController->renderFile()
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#11 C:\xampp\htdocs\yii\videocalls\protected\controllers\SiteController.php(44): SiteController->render()
+#12 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\yii\framework\web\CController.php(286): SiteController->runAction()
+#15 C:\xampp\htdocs\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#16 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#17 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\yii\videocalls\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii/videocalls/index.php?r=site/index
+in C:\xampp\htdocs\yii\videocalls\protected\extensions\bootstrap\helpers\TbHtml.php (3127)
+in C:\xampp\htdocs\yii\videocalls\protected\extensions\bootstrap\helpers\TbHtml.php (3077)
+in C:\xampp\htdocs\yii\videocalls\protected\extensions\bootstrap\helpers\TbHtml.php (2915)
+2015/09/14 17:38:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "room".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('room')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=room&guest=1&host=2
+---
+2015/09/14 17:43:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "room".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('room')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=room&guest=1&host=2
+---
+2015/09/15 18:14:02 [error] [exception.CException] exception 'CException' with message 'Users and its behaviors do not have a method or closure named "getUserStoriesAndMusicByID".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getUserStoriesA...', Array)
+#1 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(139): CActiveRecord->__call('getUserStoriesA...', Array)
+#2 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(139): Users->getUserStoriesAndMusicByID('2')
+#3 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionInvite()
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('invite')
+#8 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/invite')
+#9 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=2&slideshow=true
+---
+2015/09/15 18:16:05 [error] [exception.CException] exception 'CException' with message 'Property "Users.musicLink" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('musicLink')
+#1 C:\xampp\htdocs\yii\videocalls\protected\views\site\calling.php(55): CActiveRecord->__get('musicLink')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('//site/calling', Array, true)
+#6 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(141): CController->render('//site/calling', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionInvite()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('invite')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/invite')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=2&slideshow=true
+---
+2015/09/15 18:16:25 [error] [exception.CException] exception 'CException' with message 'Property "Users.musicLink" is not defined.' in C:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('musicLink')
+#1 C:\xampp\htdocs\yii\videocalls\protected\views\site\calling.php(55): CActiveRecord->__get('musicLink')
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('//site/calling', Array, true)
+#6 C:\xampp\htdocs\yii\videocalls\protected\controllers\CallController.php(141): CController->render('//site/calling', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): CallController->actionInvite()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('invite')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('call/invite')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/invite&contactID=2&slideshow=true
+---
+2015/09/15 20:32:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/15 20:33:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/15 20:34:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/15 20:35:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/15 20:36:52 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 20:59:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:00:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:01:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:02:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:03:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:04:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:05:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:06:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:11:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:12:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:13:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:14:32 [warning] [application] Failed to set unsafe attribute "slideShow" of "LoginForm".
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\SiteController.php (80)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/09/16 21:15:18 [error] [exception.CException] exception 'CException' with message 'CWebApplication and its behaviors do not have a method or closure named "slideShow".' in C:\xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\views\site\index.php(16): CComponent->__call('slideShow', Array)
+#1 C:\xampp\htdocs\yii\videocalls\protected\views\site\index.php(16): CWebApplication->slideShow()
+#2 C:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#6 C:\xampp\htdocs\yii\videocalls\protected\controllers\SiteController.php(44): CController->render('index', Array)
+#7 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#12 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/index')
+#13 C:\xampp\htdocs\yii\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=site/index
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:19:15 [warning] [application] Failed to set unsafe attribute "slideShow" of "LoginForm".
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\SiteController.php (80)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/09/16 21:19:44 [warning] [application] Failed to set unsafe attribute "slideShow" of "LoginForm".
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\SiteController.php (80)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/09/16 21:19:58 [warning] [application] Failed to set unsafe attribute "slideShow" of "LoginForm".
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\SiteController.php (80)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/09/16 21:21:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:22:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:23:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:24:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:25:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:26:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:27:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:28:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:29:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:30:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:31:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:32:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:33:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:34:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:35:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:36:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:37:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:38:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:39:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:40:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:41:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:42:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:43:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:44:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:45:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:46:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:47:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:49:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:51:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/16 21:54:24 [warning] [application] Failed to set unsafe attribute "slideShow" of "LoginForm".
+in C:\xampp\htdocs\yii\videocalls\protected\controllers\SiteController.php (80)
+in C:\xampp\htdocs\yii\videocalls\index.php (13)
+2015/09/17 16:52:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/17 16:53:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/17 16:54:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/17 16:56:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/17 16:57:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/17 16:58:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---
+2015/09/17 16:59:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Login Required' in C:\xampp\htdocs\yii\framework\web\auth\CWebUser.php:394
+Stack trace:
+#0 C:\xampp\htdocs\yii\videocalls\protected\components\RequireLogin.php(21): CWebUser->loginRequired()
+#1 C:\xampp\htdocs\yii\framework\base\CComponent.php(561): RequireLogin->handleBeginRequest(Object(CEvent))
+#2 C:\xampp\htdocs\yii\framework\base\CApplication.php(211): CComponent->raiseEvent('onBeginRequest', Object(CEvent))
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(182): CApplication->onBeginRequest(Object(CEvent))
+#4 C:\xampp\htdocs\yii\videocalls\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii/videocalls/index.php?r=call/cleanupOldNots
+HTTP_REFERER=http://localhost/yii/videocalls/index.php
+---

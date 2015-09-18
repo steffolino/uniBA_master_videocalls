@@ -17,7 +17,7 @@ $(document).ready(function () {
 			//console.log(js_username);
 
 	} else {
-		alert("Username not set");
+		console.log("Username not set");
 	}
 
 	$("#answerModal").on('hide.bs.modal', function () {
@@ -56,7 +56,7 @@ function markNotAsCompleted(notID) {
 			data: {notID : notID}			
 		})
 		.fail(function(error) {
-			alert("Notification Error");
+			console.log("Notification Error");
 		})
 		.done(function(data) {
 			console.log('notification '+data+ ' marked as completed');
@@ -74,7 +74,7 @@ function pollForAnswerCall (inviteeID) {
 			data: {inviteeID : inviteeID}
 		})
 		.fail(function(error) {
-			alert("Notification Error");
+			console.log("Notification Error");
 		})
 		.success(function(data) {
 			if(data !== "no notifications") {

@@ -10,6 +10,7 @@ class LoginForm extends CFormModel
 	public $username;
 	public $password;
 	public $rememberMe;
+	public $slideShow;
 
 	private $_identity;
 
@@ -38,6 +39,7 @@ class LoginForm extends CFormModel
 		return array(
 			'rememberMe'=>'Remember me next time',
 			'username' => 'Ihr Name:',
+			'slideShow' => 'Slideshow aktivieren?'
 		);
 	}
 

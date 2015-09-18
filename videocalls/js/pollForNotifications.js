@@ -9,7 +9,7 @@ $(document).ready(function () {
 				console.log("polling for "+js_username);
 			}, POLLINGTIME);
 	} else {
-		alert("Username not set");
+		console.log("Username not set");
 	}
 
 	$("#answerButton").on('click', function () {
@@ -36,7 +36,7 @@ function setInvitationToAccepted(notID) {
 			data: {notID : notID}			
 		})
 		.fail(function(error) {
-			alert("Notification Error: " + error);
+			console.log("Notification Error: " + error);
 		})
 		.done(function(data) {
 			console.log('notification '+data+ ' marked as accepted');
@@ -50,7 +50,7 @@ function setInvitationToRejected(notID) {
 			data: {notID : notID}			
 		})
 		.fail(function(error) {
-			alert("Notification Error: " + error);
+			console.log("Notification Error: " + error);
 		})
 		.done(function(data) {
 			console.log('notification '+data+ ' marked as rejected');
@@ -67,7 +67,7 @@ function pollForNotifications (username) {
 			
 		})
 		.fail(function(error) {
-			alert("Notification Error: " + error);
+			console.log("Notification Error: " + error);
 		})
 		.success(function(data) {
 			if(data !== "no notifications") {

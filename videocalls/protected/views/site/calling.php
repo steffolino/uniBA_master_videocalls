@@ -32,19 +32,10 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 
 <!-- Header -->
 <div class=row>
-	<div class="jumbotron col-md-12 _col-md-offset-1 jumboheader">
-			<div class=row>
-				<div class="col-md-3">
-					<div class="well">
-						<h2  style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?></h2>
-					</div>
-				</div>
-				<div class="col-md-6 alert-info">
-					<h2 style="text-align:center">
-						Wir warten bis <?php echo strtoupper($invitee->username); ?> den Anruf beantwortet
-					</h2>
-				</div>
-			</div>
+	<div class="jumbotron col-md-12 alert alert-info jumboHeader">
+		<h4  style="text-align:center;"	>Hallo <?php echo strToUpper(Yii::app()->user->name); ?>.
+			Wir warten bis <?php echo strtoupper($invitee->username); ?> den Anruf beantwortet
+		</h4>
 	</div>
 </div>
 
@@ -53,7 +44,8 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 $this->widget ( 'ext.mediaElement.MediaElementPortlet',
     array ( 
 	'id' => 'mediaPlayer',
-    'url' => 'http://mp3.ffh.de/ffhchannels/hqschlager.mp3',
+    //'url' => 'http://mp3.ffh.de/ffhchannels/hqschlager.mp3',
+    'url' => $invitee->userMusic->musicLink,	
 	// or you can set the model and attributes
     //'model' => $model,
     //'attribute' => 'url'
@@ -72,27 +64,28 @@ $this->widget ( 'ext.mediaElement.MediaElementPortlet',
 	</script>
 
 <!-- Main Showing Textual Information on Invitee-->
-<?php if(empty($_GET['slideshow'])) {
+<?php if(Yii::app()->getGlobalState('slideShow') !== '1') {
 	echo "<div class='row'>
-		<div class='jumbotron col-md-12 _col-md-offset-1'>
-			<h3 style='text-align:center;'>
-				W&auml;hrend wir warten, wussten Sie das schon &uuml;ber ". strToUpper($invitee->username) ."?
-			</h3>
-			<br/>
+		<div class='jumbotron col-md-12'>
+			<div class='well'>
+				<h4 style='text-align:center;'>
+					W&auml;hrend wir warten, wussten Sie das schon &uuml;ber ". strToUpper($invitee->username) ."?
+				</h4>
+			</div>
 			<div class=row>";
 				echo "<!-- Carousel START-->";
 								echo  "								
 								<div class=row>
-									<div class='col-md-10 col-md-offset-1'>
-										<div class='media' style='margin-bottom:20px;'>
+									<div class='col-md-10 col-md-offset-1 well'>
+										<div class='media'>
 											<a class='pull-left'>
-												<img class='media-object img-circle' style='max-height:280px;' src='images/userImages/user" . $invitee->userID . ".jpg'>
+												<img class='media-object img-circle' style='max-height:240px;' src='images/userImages/user" . $invitee->userID . ".jpg'>
 											</a>
 												<div class='media-body'>
 													<blockquote id='videoRight_infoText'>";
 													for ($i = 0; $i < sizeOf($invitee->ownUserStories); $i++) {
 													echo "<!--h3 class='media-heading'>Did you know about ".$invitee->username."?</h3-->
-													<h3>". strToUpper($invitee->username)." ". $invitee->ownUserStories[$i]->userStory. "</h3>";
+													<h4>". strToUpper($invitee->username)." ". $invitee->ownUserStories[$i]->userStory. "</h4>";
 													}
 													echo "</blockquote>";
 											echo "</div>
@@ -105,13 +98,14 @@ $this->widget ( 'ext.mediaElement.MediaElementPortlet',
 	</div>";
 } else {
 	echo "<div class='row'>
-		<div class='jumbotron col-md-12 _col-md-offset-1'>
-			<h3>
-				W&auml;hrend wir warten, erinnern Sie sich an ... ?
-			</h3>
-			<br/>
+		<div class='jumbotron col-md-12'>
+			<div class='well'>
+				<h4>
+					W&auml;hrend wir warten, erinnern Sie sich an ... ?
+				</h4>
+			</div>
 			<div class=row>
-			<div class='col-md-8 col-md-offset-2'>";
+			<div class='col-md-8 col-md-offset-2 well'>";
 				echo "<!-- Carousel START-->";
 				    $this->widget(
 						'booster.widgets.TbCarousel',
@@ -121,16 +115,16 @@ $this->widget ( 'ext.mediaElement.MediaElementPortlet',
 							),
 							'items' => array(
 								array(
-									'image' => ('images/remPhotos/user1/image01.jpg'),
-									'caption' => 'Die Besuche in der Eisdiele mit Ihrer Cousine Elke'
+									'image' => $invitee->userImages->userImageLink1,
+									'caption' => $invitee->userImages->userImageDescription1
 								),
 								array(
-									'image' => ('images/remPhotos/user1/image02.jpg'),
-									'caption' => 'Onkel Herbert\'s 80. Geburtstag als Sie zu viel Kuchen gegessen haben'
+									'image' => $invitee->userImages->userImageLink2,
+									'caption' => $invitee->userImages->userImageDescription2
 								),
 								array(
-									'image' => ('images/remPhotos/user1/image03.jpg'),
-									'caption' => 'Die Feier der Sportmannschft als Sie Ihren Mann kennengelernt haben'
+									'image' => $invitee->userImages->userImageLink3,
+									'caption' => $invitee->userImages->userImageDescription3
 								),
 							),
 						)
@@ -172,7 +166,7 @@ $this->widget ( 'ext.mediaElement.MediaElementPortlet',
 			<h4 class="modal-title">Anruf abgewiesen</h4>
 		  </div>
 		  <div class="modal-body">
-			<p id="rejectText"> <?php echo $invitee->username; ?> hat Ihren Anruf abgewiesen</p>
+			<p id="rejectText"> <?php echo strToUpper($invitee->username); ?> hat Ihren Anruf abgewiesen.</p>
 		  </div>
 		  <div class="modal-footer">
 			<a id="goBackButton" href="<?php echo Yii::app()->createUrl('site/index'); ?>" type="submit" class="btn btn-primary">OK, zurück zum Start</a>

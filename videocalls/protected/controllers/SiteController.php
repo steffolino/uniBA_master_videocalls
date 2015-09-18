@@ -84,6 +84,7 @@ class SiteController extends Controller
 			*/
 			if($model->validate() && $model->login()) {	
 				//$this->redirect(Yii::app()->user->returnUrl);
+				Yii::app()->setGlobalState('slideShow', $_POST['LoginForm']['slideShow']);
 				$this->redirect(Yii::app()->createUrl('site/index'));
 			}
 		} else {
