@@ -27,7 +27,7 @@ $cs->registerScriptFile($baseUrl.'/css/bootstrap-material-design/dist/js/ripples
 
 <!-- Header -->
 <div class=row>
-	<div class="jumbotron alert alert-info col-md-12 jumboHeader">
+	<div class="jumbotron alert alert-warning col-md-12 jumboHeader">
 				<h4  style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?>.
 						<?php
 						if(isset($_GET['leftCall'])) {

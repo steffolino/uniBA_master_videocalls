@@ -41,7 +41,7 @@ foreach($conversationPartners as $participant) {
 
 <!-- Header -->
 <div class=row>
-	<div id="jumboHeader" class="alert alert-info col-md-12 well">
+	<div id="jumboHeader" class="alert alert-warning col-md-12 well">
 		<h4 style="text-align:center;"> Hallo <?php echo strToUpper(Yii::app()->user->name); ?>. Sie telefonieren mit <?php echo strtoupper($visavis->username); ?>
 		</h4>
 	</div>
@@ -106,16 +106,6 @@ foreach($conversationPartners as $participant) {
 }
 video {
 	width:100%;
-}
-.spickerP {
-	transition:  all 0.2s ease-in;
-	-webkit-transition: all 0.2s ease-in;
-}
-.spickerP:focus, .spickerP:hover {
-	font-size: 32px;
-	font-weight: 500;
-	background-color: #dedede;
-	padding-left: 5px;
 }
 
 .footFully {

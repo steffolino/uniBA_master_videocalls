@@ -20,7 +20,7 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 				<div class="col-md-3">
 					<h2>Hello <?php //echo Yii::app()->user->name; ?></h2>
 				</div>
-				<div class="col-md-6 alert-info">
+				<div class="col-md-6 alert-warning">
 					<h2 style="text-align:center">
 						You are talking to <?php //echo strtoupper($visavis->username); ?>
 					</h2>
@@ -32,7 +32,7 @@ $cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 
 <!-- Header -->
 <div class=row>
-	<div class="jumbotron col-md-12 alert alert-info jumboHeader">
+	<div class="jumbotron col-md-12 alert alert-warning jumboHeader">
 		<h4  style="text-align:center;"	>Hallo <?php echo strToUpper(Yii::app()->user->name); ?>.
 			Wir warten bis <?php echo strtoupper($invitee->username); ?> den Anruf beantwortet
 		</h4>
@@ -67,15 +67,16 @@ $this->widget ( 'ext.mediaElement.MediaElementPortlet',
 <?php if(Yii::app()->getGlobalState('slideShow') !== '1') {
 	echo "<div class='row'>
 		<div class='jumbotron col-md-12'>
-			<div class='well'>
-				<h4 style='text-align:center;'>
-					W&auml;hrend wir warten, wussten Sie das schon &uuml;ber ". strToUpper($invitee->username) ."?
-				</h4>
+			<div class='row'>
+				<div class='well col-md-10 col-md-offset-1'>
+					<h4 style='text-align:center;'>
+						W&auml;hrend wir warten, wussten Sie das schon &uuml;ber ". strToUpper($invitee->username) ."?
+					</h4>
+				</div>
 			</div>
 			<div class=row>";
 				echo "<!-- Carousel START-->";
 								echo  "								
-								<div class=row>
 									<div class='col-md-10 col-md-offset-1 well'>
 										<div class='media'>
 											<a class='pull-left'>
@@ -90,8 +91,7 @@ $this->widget ( 'ext.mediaElement.MediaElementPortlet',
 													echo "</blockquote>";
 											echo "</div>
 											</div>
-										</div>
-									</div>";
+										</div>";
 		echo"			<!-- Carousel END-->
 			</div>
 		</div>

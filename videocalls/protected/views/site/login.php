@@ -11,7 +11,7 @@ $this->breadcrumbs=array(
 <!--HEader -->
 <!-- Header -->
 <div class=row>
-	<div class="jumbotron jumboHeader alert alert-info col-md-12">
+	<div class="jumbotron jumboHeader alert alert-warning col-md-12">
 				<h4  style="text-align:center;">Willkommen. Bitte geben Sie Ihren Namen ein.
 				</h4>
 	</div>
