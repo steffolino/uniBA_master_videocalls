@@ -6,29 +6,16 @@ $logoutLink =  Yii::app()->createUrl('/site/logout');
 $baseUrl = Yii::app()->baseUrl; 
 $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile($baseUrl.'/js/pollForNotifications.js');
-/*$cs->registerCssFile($baseUrl.'/css/bootstrap-material-design/dist/css/material-fullpalette.css');
-$cs->registerScriptFile($baseUrl.'/css/bootstrap-material-design/dist/js/material.js');
-$cs->registerCssFile($baseUrl.'/css/bootstrap-material-design/dist/css/ripples.css');
-$cs->registerCssFile($baseUrl.'/css/bootstrap-material-design/dist/css/roboto.css');
-$cs->registerScriptFile($baseUrl.'/css/bootstrap-material-design/dist/js/ripples.js');
-*/
-
-//echo Yii::app()->getGlobalState('slideShow');
 ?>
 
 <script language="javascript" type="text/javascript">
-/*	$(document).ready(function () {
-		$.material.init('.btn', '.well', '.jumbotron');
-		$.material.ripples('.btn');	
-	});
-*/
     var js_username = "<?php echo Yii::app()->user->name ?>";
 </script>
 
 <!-- Header -->
 <div class=row>
 	<div class="jumbotron alert alert-warning col-md-12 jumboHeader">
-				<h4  style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?>.
+				<h4 class="greeting" style="text-align:center;">Hallo <?php echo strToUpper(Yii::app()->user->name); ?>.
 						<?php
 						if(isset($_GET['leftCall'])) {
 							echo "Sie haben soeben den Anruf mit ". strtoupper(htmlspecialchars($_GET['leftCall'])) . ' beendet.';					
@@ -105,7 +92,7 @@ echo "</pre>";
 									'header' => 'M&ouml;chten Sie '.strToUpper($contact['contactName']['username']).' anrufen?',
 									'content' => "<div style='margin-left:auto; margin-right:auto; width:25%;'><img class='img-circle'  src='images/userImages/user".$contact['contactID'].".jpg' style='max-height:160px;' alt=".$contact['contactName']['username']."></div>",
 									'footer' => array(
-										TbHtml::button('Ja', array('data-dismiss' => 'modal', 'submit'=>'index.php?r=call/invite&contactID='.$contact['contactID'], 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)),
+										TbHtml::button('Ja', array('data-dismiss' => 'modal', 'submit'=>'index.php?r=call/invite&guest='.$contact['contactID'].'&host='.$currentUser[0]['userID'], 'color' => TbHtml::BUTTON_COLOR_PRIMARY, 'size' => TbHtml::BUTTON_SIZE_LARGE)),
 										TbHtml::button('Nein', array('data-dismiss' => 'modal',  'size' => TbHtml::BUTTON_SIZE_LARGE)),
 									 ),
 								));

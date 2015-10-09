@@ -3,8 +3,11 @@
 /**
 * 	Call Controller
 *  Handles all call-related actions, e.g. send invitations, handle notifications (in DB)
+ * @author stefan
+ * @version 0.9
+ * @package application.controllers
+ * @todo rewrite models and move db-actions from controller to respective models
 **/
-
 Class CallController extends Controller 
 {
 	public function actionMarkNotAsCompleted() {
@@ -24,6 +27,9 @@ Class CallController extends Controller
 		}
 	}
 	
+	/**
+	* sets a notification / invitation status to rejected
+	*/
 	public function actionSetInvitationToRejected() {
 		if(!empty($_GET['notID'])) {
 			
@@ -31,14 +37,21 @@ Class CallController extends Controller
 
 			$notification = UserNotifications::model()->getNotificationByID($notID);
 			$notification->notAnswer = 'no';
-			$notification->save();
-			echo $notification->notID;
+			$notification->save();	
+		
+			$inviterID = $notification->inviterID;
+			$inviterName = Users::model()->getUserNameByID($inviterID);
+
+			echo $inviterName;
 
 		} else {
 			echo "Could not mark Notification as Answered";
 		}
 	}
-	
+
+	/**
+	* sets a notification / invitation status to accepted
+	*/	
 	public function actionSetInvitationToAccepted() {
 		if(!empty($_GET['notID'])) {
 
@@ -96,8 +109,8 @@ Class CallController extends Controller
 	**/
 	public function actionPollNotificationsInviter () 
 	{			
-		if(!empty($_GET['inviteeID'])) {
-			$inviteeID = $_GET['inviteeID'];
+		if(!empty($_GET['guestID'])) {
+			$inviteeID = $_GET['guestID'];
 				
 			$notification = UserNotifications::model()->pollForAnsweredNots($inviteeID);
 					
@@ -123,46 +136,74 @@ Class CallController extends Controller
 	 */
 	public function actionInvite()
 	{
+		/*
 		$inviteeID = Yii::app()->getRequest()->getParam('contactID');	
 		//$notification = UserNotifications::model()->find(array('condition'=>'userID=:inviteeID', 'params'=>array(':inviteeID'=>$inviteeID)));
 
 		$currentUser = Users::model()->getUserStoriesByName(Yii::app()->user->name);
-		
-		//TODO: move to model
-		$notification = new UserNotifications;
-		$notification->userID = $inviteeID;
-		$notification->notText = strToUpper(Yii::app()->user->name) . ' ruft Sie an';
-		$notification->notLink = Yii::app()->createUrl('call/room', array('host'=> $currentUser->userID, 'guest' => $inviteeID));
-		$notification->inviterID = $currentUser->userID;
-		$notification->save();
-							
-		$invitee = Users::model()->getUserStoriesAndMusicAndImagesByID($inviteeID);
-				
-		$this->render('//site/calling', array('invitee'=>$invitee, 'notification' => $notification));			
-	}
-	
-	/**
-	* Establishes room for actual conversation using WebRTC
-	*/
-	public function actionRoom () {
+		*/
+
 		if(isset($_GET['host']) && isset($_GET['guest'])) {
 
 			$guestID = htmlspecialchars($_GET['guest']);
 			$hostID = htmlspecialchars($_GET['host']);
 
-			$conversationPartners = Users::model()->gatherCallPartnersStories($guestID, $hostID);
+			$hostName = Users::model()->getUserNameByID($hostID);
+		
+			//TODO: move to model
+			$notification = new UserNotifications;
+			$notification->userID = $guestID;
+			$notification->notText = strToUpper($hostName) . ' ruft Sie an';
+			$notification->notLink = Yii::app()->createUrl('call/accepted', array('host'=> $hostID, 'guest' => $guestID, 'isInvited'=>'1'));
+			$notification->inviterID = $hostID;
+			$notification->save();
+			/*				
+			$invitee = Users::model()->getUserStoriesAndMusicAndImagesByID($inviteeID);
+					
+			$this->render('//site/calling', array('invitee'=>$invitee, 'notification' => $notification));			
+			*/
+
+			$conversationPartners = Users::model()->getUserStoriesAndMusicAndImagesByID($guestID, $hostID);
 			
 			if(!empty($conversationPartners)) {
-				$this->render('room', array('conversationPartners' => $conversationPartners));
+				$this->render('calling', array('conversationPartners' => $conversationPartners, 'notification' => $notification));
 			} else {
 				echo "No results from DB";
 			}
 		} else {
 			echo "GET NOT SET";
 			$this->render('room');//, array('conversationPartners' => $conversationPartners));
-		}
+		}		
+
 	}
 	
+	/**
+	* Establishes room for actual conversation using WebRTC
+	*/
+	public function actionAccepted () {
+		if(isset($_GET['host']) && isset($_GET['guest'])) {
+
+			$guestID = htmlspecialchars($_GET['guest']);
+			$hostID = htmlspecialchars($_GET['host']);
+		
+			$conversationPartners = Users::model()->getUserStoriesAndMusicAndImagesByID($guestID, $hostID);
+			
+			if(!empty($conversationPartners)) {
+				$this->render('calling', array('conversationPartners' => $conversationPartners));
+			} else {
+				echo "No results from DB";
+			}
+		} else {
+			echo "GET NOT SET";
+			$this->render('calling');//, array('conversationPartners' => $conversationPartners));
+		}		
+	}
+	
+	/**
+	* garbage collection
+	* scans db for notifications older than 10 minutes and  sets their status to completed
+	* @todo: refine algorithm
+	*/
 	public function actionCleanupOldNots () {
 
 		$currentTime = time();

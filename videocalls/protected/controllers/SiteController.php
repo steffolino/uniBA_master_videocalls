@@ -1,5 +1,12 @@
 <?php
 
+/**
+* 	Site Controller
+*  Handles all structural actions, for instance login & logout and displaying home / index
+ * @author stefan
+ * @version 1.0
+ * @package application.controllers
+**/
 class SiteController extends Controller
 {
 	/**

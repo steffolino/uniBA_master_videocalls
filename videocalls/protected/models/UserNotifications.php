@@ -1,14 +1,17 @@
 <?php
-/***
-
-ActiveRecord Class to represent UserDescriptions in DB
-
-***/
-
+/**
+* ActiveRecord Class to represent Table UserNotifications in DB
+ * @author stefan
+ * @version 0.9
+ * @package application.models.activeRecords
+ * @todo implement 2 more methods to accept & reject invitations
+**/
 class UserNotifications extends CActiveRecord {
 
-
-	//MUST HAVE
+	/**
+	* default ctor for ActiveRecords
+	* @param string $className default param classname
+	*/
 	public static function model($className=__CLASS__) {
 			return parent::model($className);
 		}
@@ -24,6 +27,11 @@ class UserNotifications extends CActiveRecord {
         );
     }
 	
+	/**
+	* Takes notificationID and returns Notification Active Record Object
+	* @param integer $notID Notification ID
+	* @return Notification Active Record Object
+	*/
 	public function getNotificationByID($notID) {
 
 			$criteria = new CDbCriteria();
@@ -33,7 +41,11 @@ class UserNotifications extends CActiveRecord {
 			return $this->find($criteria);
 	
 	}
-	
+
+	/**
+	* Takes NotificationID and marks it as completed
+	* doc eror:__@param integer $notID Notification ID
+	*/	
 	public function notificationCompleted ($notID) {
 			$criteria = new CDbCriteria();
 			$criteria->condition = 'notID=:notificationID';
@@ -41,10 +53,6 @@ class UserNotifications extends CActiveRecord {
 				
 			$notification = $this->find($criteria);
 
-			/*
-			$notification->notCompleted = true;
-			$notification->save();
-			*/
 			$this->notCompleted = true;
 			$this->save();
 			
@@ -52,7 +60,12 @@ class UserNotifications extends CActiveRecord {
 	}
 	
 	
-	
+	/**
+	* Queries DB for unread notifications
+	* doc error: cannot find param currentUserID
+	* @param string $currentUserID current Users id
+	* @return $notification returns notification AR Object
+	*/		
 	public function pollForUnreadNots($currentUserID) {
 		$criteria = new CDbCriteria();
 		$criteria->condition = 'userID=:currentUserID AND notAnswer = "unread" AND notCompleted = 0';
@@ -63,6 +76,11 @@ class UserNotifications extends CActiveRecord {
 		return $notification;
 	}
 
+	/*
+	* Queries DB for answered notifications / invitations
+	* @param integer $inviteeID ID of invited user
+	* @return $notification returns notification AR Object
+	*/		
 	public function pollForAnsweredNots($inviteeID) {
 		$criteria = new CDbCriteria();
 			$criteria->condition = 'userID=:inviteeID AND notAnswer != "unread" AND notCompleted = 0';

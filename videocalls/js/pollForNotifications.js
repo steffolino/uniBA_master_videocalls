@@ -54,6 +54,7 @@ function setInvitationToRejected(notID) {
 		})
 		.done(function(data) {
 			console.log('notification '+data+ ' marked as rejected');
+			$(".greeting").html('Sie haben soeben den Anruf von '+data+' abgelehnt.')
 		});
 }
 

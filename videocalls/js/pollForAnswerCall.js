@@ -7,7 +7,7 @@ $(document).ready(function () {
 	//TODO: employ timeout
 	hangUpTimeout();	
 
-	var inviteeID = getUrlParameter('contactID');
+	var inviteeID = getUrlParameter('guest');
 
 	if(inviteeID !== null) {
 			 setInterval(function() {
@@ -71,7 +71,7 @@ function pollForAnswerCall (inviteeID) {
 	$.ajax(
 		{
 			url: 'index.php?r=call/pollNotificationsInviter',		
-			data: {inviteeID : inviteeID}
+			data: {guestID : inviteeID}
 		})
 		.fail(function(error) {
 			console.log("Notification Error");

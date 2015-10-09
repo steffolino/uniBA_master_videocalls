@@ -1,13 +1,16 @@
 <?php
-/***
-
-ActiveRecord Class to represent Contacts in DB
-
-***/
-
+/**
+* ActiveRecord Class to represent Contacts in DB
+ * @author stefan
+ * @version 1.0
+ * @package application.models.activeRecords
+**/
 class UserContacts extends CActiveRecord {
 
-	//MUST HAVE
+	/**
+	* default ctor for ActiveRecords
+	* @param string $className default param classname
+	*/
 	public static function model($className=__CLASS__) {
 			return parent::model($className);
 		}
