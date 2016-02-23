@@ -13,7 +13,6 @@
 		$baseUrl = Yii::app()->baseUrl; 
 		$cs = Yii::app()->getClientScript();
 		$cs->registerCssFile($baseUrl.'/css/font-awesome.min.css');
-		$cs->registerScriptFile($baseUrl.'/js/cleanupOldNots.js');			
 	?>
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>

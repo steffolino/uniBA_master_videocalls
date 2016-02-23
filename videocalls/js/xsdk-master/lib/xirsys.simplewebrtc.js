@@ -52,7 +52,7 @@
       connect : function ($opts, $rtcOpts) {
         this.xirsys_opts = $opts;
         $rtcOpts = $rtcOpts || {};
-        $rtcOpts.url = "https://endpoint01.uswest.xirsys.com:449";
+        $rtcOpts.url = "https://endpoint01.uswest.xirsys.com";
         this.ref = new SimpleWebRTC($rtcOpts);
       },
       on : function ($ev, $fun) {

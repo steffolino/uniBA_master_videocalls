@@ -42,7 +42,8 @@ class UserIdentity extends CUserIdentity
 		);
 */		
 		if(!isset($Users[strToLower($this->username)])) {
-			echo "Username is not set: " . strToLower($this->username);
+			echo "Username not found: " . strToLower($this->username);
+			echo "<br/>Please go back and try again.";
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 			//elseif($Users[$this->username]!==$this->password)
 			//	$this->errorCode=self::ERROR_PASSWORD_INVALID;

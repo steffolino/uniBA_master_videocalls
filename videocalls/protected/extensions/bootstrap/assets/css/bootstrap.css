@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"); */
+@font-face { 
+font-family: "Roboto"; 
+src: url("../fonts/Roboto-Regular.ttf"); 
+}
 /*!
  * bootswatch v3.3.5
  * Homepage: http://bootswatch.com
@@ -1134,8 +1138,9 @@ img {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  width: 100%;
   height: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .img-rounded {
   border-radius: 3px;
@@ -6308,9 +6313,10 @@ button.close {
 }
 .carousel-inner {
   position: relative;
-  width: 100%;
+  width: auto;
   overflow-x: hidden;
   max-height: 100%;
+  background: #222222;
 }
 .carousel-inner > .item {
   position: relative;
@@ -7081,6 +7087,8 @@ a {
 }
 label {
   font-weight: normal;
+  color: #444444;
+  font-size: 20px;
 }
 textarea,
 textarea.form-control,
@@ -7098,9 +7106,12 @@ input[type=number],
   border: none;
   border-radius: 0;
   -webkit-appearance: none;
-  -webkit-box-shadow: inset 0 -1px 0 #dddddd;
-  box-shadow: inset 0 -1px 0 #dddddd;
-  font-size: 16px;
+  -webkit-box-shadow: inset 0 -1px 0 #444444;
+  box-shadow: inset 0 -1px 0 #444444;
+  font-size: 36px;
+  height: 50px;
+  padding-left: 15px;
+  margin-top: 10px;
 }
 textarea:focus,
 textarea.form-control:focus,

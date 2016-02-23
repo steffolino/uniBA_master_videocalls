@@ -6,6 +6,8 @@ $logoutLink =  Yii::app()->createUrl('/site/logout');
 $baseUrl = Yii::app()->baseUrl; 
 $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile($baseUrl.'/js/pollForNotifications.js');
+$cs->registerScriptFile($baseUrl.'/js/cleanupOldNots.js');			
+
 ?>
 
 <script language="javascript" type="text/javascript">
@@ -53,8 +55,13 @@ echo "</pre>";
 								"<div class='col-sm-6 col-md-".$colMdSize."' style='min-width:20%;'>
 									<div class='thumbnail  shadow-z-1' style='_height:400px'>
 									<img class='img-circle' src='images/userImages/user".$contact['contactID'].".jpg' style='max-height:180px;' alt=".$contact['contactName']['username'].">
-									<div class='caption'>
-										<h3 style='text-align:center'>".strToUpper($contact['contactName']['username'])."</h3>";
+									<div class='caption'>";
+										if(strlen($contact['contactName']['username']) < 10) {
+											echo "<h3 style='text-align:center'>".strToUpper($contact['contactName']['username'])."</h3>";	
+										} else {
+											echo "<h3 style='text-align:center; font-size: 1.8em;'>".strToUpper($contact['contactName']['username'])."</h3>";	
+										}
+
 											echo "<div style='_height:110px'><p>";
 											echo "<ul>";
 											//var_dump($contact['contactStories']);
@@ -70,14 +77,14 @@ echo "</pre>";
 												'color' => TbHtml::BUTTON_COLOR_PRIMARY,
 												'size' => TbHtml::BUTTON_SIZE_LARGE,
 												'data-toggle' => 'modal',
-												'data-target' => '#call'.$contact['contactName']['username'].'Modal',
+												'data-target' => '#call'.str_replace(" ", "_", $contact['contactName']['username']).'Modal',
 											));
 										} else {
 											echo TbHtml::button('Anrufen', array(
 												'color' => TbHtml::BUTTON_COLOR_PRIMARY,
 												'size' => TbHtml::BUTTON_SIZE_LARGE,
 												'data-toggle' => 'modal',
-												'data-target' => '#call'.$contact['contactName']['username'].'Modal',
+												'data-target' => '#call'.str_replace(" ", "_", $contact['contactName']['username']).'Modal',
 											));											
 										}
 										//<a href='".Yii::app()->createUrl('site/invite', array('contactID'=>$contact['contactID']))."' class='btn btn-primary' role='button' data-toggle='>Call ".strToUpper($contact['contactName']['username'])."</a>
@@ -88,7 +95,7 @@ echo "</pre>";
 
 								// Modals --> One modal for every contact ---> performance?!
 								$this->widget('bootstrap.widgets.TbModal', array(
-									'id' => 'call'.$contact['contactName']['username'].'Modal',
+									'id' => 'call'.str_replace(" ", "_", $contact['contactName']['username']).'Modal',
 									'header' => 'M&ouml;chten Sie '.strToUpper($contact['contactName']['username']).' anrufen?',
 									'content' => "<div style='margin-left:auto; margin-right:auto; width:25%;'><img class='img-circle'  src='images/userImages/user".$contact['contactID'].".jpg' style='max-height:160px;' alt=".$contact['contactName']['username']."></div>",
 									'footer' => array(
@@ -105,7 +112,7 @@ echo "</pre>";
 </div>
 	
 	<!-- START OF Invitation Modal -->
-	<div class="modal fade" id="invitationModal">
+	<div class="modal " id="invitationModal">
 	  <div class="modal-dialog">
 		<div class="modal-content">
 		  <div class="modal-header">

@@ -9,21 +9,23 @@ if(!(isset($_GET['isInvited']))) {
 	$cs = Yii::app()->getClientScript();
 	$cs->registerScriptFile($baseUrl.'/js/pollForAnswerCall.js');
 }
-?>
-
-<script language="javascript" type="text/javascript">
-    var js_username = "<?php echo Yii::app()->user->name ?>";
-</script>
-
-<?php
 
 foreach($conversationPartners as $participant) {
 	if($participant->username !== Yii::app()->user->name) {
 			$visavis = $participant;
+	} else {
+		$self = $participant;
 	}
 }
 
 ?>
+
+<script language="javascript" type="text/javascript">
+    var js_username = "<?php echo Yii::app()->user->name ?>";
+    var js_visavisName = "<?php echo $visavis->username ?>";
+</script>
+
+
 <!--div class=row>
 	<div class="jumbotron col-md-12 jumboheader">
 			<div class=row>
@@ -56,38 +58,14 @@ foreach($conversationPartners as $participant) {
 				} else {
 					echo "Wir warten bis ". strtoupper($visavis->username) ." den Anruf beantwortet";
 				}
+				echo "<span id='doit'>*</span>";
 				?>
-				<a id="doit">klick</a>
 			</h4>
 		</div>
 	</div>
-
-	<?php
-
-	$this->widget ( 'ext.mediaElement.MediaElementPortlet',
-		array ( 
-		'id' => 'mediaPlayer',
-		//'url' => 'http://mp3.ffh.de/ffhchannels/hqschlager.mp3',
-		'url' => $visavis->userMusic->musicLink,	
-		// or you can set the model and attributes
-		//'model' => $model,
-		//'attribute' => 'url'
-		// its required and so you have to set correctly
-		 'mimeType' =>'audio/mp3', 
-		 'htmlOptions' => array(
-			'id' => 'mediaPlayer',
-			'display' => 'none',
-			),
-		));	
-	?>
-		<script>
-			$(document).ready(function () {
-				$(".mejs-container").hide();
-			});
-		</script>
-
+	
 	<!-- Main Showing Textual Information on visavis-->
-	<?php if(Yii::app()->getGlobalState('slideShow') !== '1') {
+	<?php if(Yii::app()->getGlobalState('slideShow') !== '1') {		
 		echo "<div class='row'>
 			<div class='jumbotron col-md-12'>
 				<div class='row'>
@@ -120,6 +98,25 @@ foreach($conversationPartners as $participant) {
 			</div>
 		</div>";
 	} else {
+		
+		$this->widget ( 'ext.mediaElement.MediaElementPortlet',
+			array ( 
+			'id' => 'mediaPlayer',
+			//'url' => 'http://mp3.ffh.de/ffhchannels/hqschlager.mp3',
+			'url' => $self->userMusic->musicLink,	
+			// or you can set the model and attributes
+			//'model' => $model,
+			//'attribute' => 'url'
+			// its required and so you have to set correctly
+			 'mimeType' =>'audio/mp3', 
+			 'htmlOptions' => array(
+				'preload' => 'none',
+				'id' => 'mediaPlayer',
+				'display' => 'none',
+				),
+			));	
+
+		
 		echo "<div class='row'>
 			<div class='jumbotron col-md-12'>
 				<div class='well'>
@@ -159,6 +156,17 @@ foreach($conversationPartners as $participant) {
 		</div>";
 	}
 	?>	
+	
+		<script>
+			$(document).ready(function () {
+				if($(".mejs-container")) {
+					$(".mejs-container").hide();
+				}
+			});
+		</script>
+
+
+	
 		<!-- START OF Answer Modal -->
 		<div class="modal fade" id="answerModal">
 		  <div class="modal-dialog">
@@ -170,7 +178,7 @@ foreach($conversationPartners as $participant) {
 			  <div class="modal-body">
 				<?php
 					if(isset($_GET['isInvited'])) {
-						echo '<p id="answerText">Das Telefonat ist nun fertig eingerichtet.</p>';
+						echo '<p id="answerText">Die Leitung steht</p>';
 					} else {
 						echo '<p id="answerText">'.strToUpper($visavis->username).' hat Ihren Anruf beantwortet und wartet auf Sie.</p>';
 					}
@@ -189,6 +197,9 @@ foreach($conversationPartners as $participant) {
 		<?php
 		if(!(isset($_GET['isInvited']))) {
 			?>
+			<script>
+			var js_notID = "<?php echo $notification->notID ?>";
+			</script>
 			<!-- START OF Reject Modal -->
 			<div class="modal fade" id="rejectModal">
 			  <div class="modal-dialog">
@@ -202,7 +213,7 @@ foreach($conversationPartners as $participant) {
 				  </div>
 				  <div class="modal-footer">
 					<a id="goBackButton" href="<?php echo Yii::app()->createUrl('site/index'); ?>" type="submit" class="btn btn-lg btn-primary">OK, zurück</a>
-					<input value="<?php echo $notification->notID; ?>" id="hidden_notificationID" type=hidden />			
+					<!--input value="<?php //echo $notification->notID; ?>" id="hidden_notificationID" type=hidden />
 				  </div>
 				</div><!-- /.modal-content -->
 			  </div><!-- /.modal-dialog -->
@@ -222,7 +233,6 @@ foreach($conversationPartners as $participant) {
 				  </div>
 				  <div class="modal-footer">
 					<a id="goBackButton" href="<?php echo Yii::app()->createUrl('site/index'); ?>" type="submit" class="btn btn-primary btn-lg">OK, zurück</a>
-					<input value="<?php echo $notification->notID; ?>" id="hidden_notificationID" type=hidden />			
 				  </div>
 				</div><!-- /.modal-content -->
 			  </div><!-- /.modal-dialog -->

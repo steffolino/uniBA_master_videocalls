@@ -5,6 +5,17 @@ $this->pageTitle=Yii::app()->name . ' - Room';
 $this->breadcrumbs=array(
 	'Room',
 );
+
+ // Access-Control headers are received during OPTIONS requests
+    if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+
+        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+            header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");         
+
+        if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+            header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+
+    }
 /*
 Yii::app()->clientScript->registerScriptFile(
 	//only when connected to internet
@@ -27,6 +38,7 @@ $logoutLink =  Yii::app()->createUrl('/site/logout');
 
 <script language="javascript" type="text/javascript">
     var js_username = "<?php echo Yii::app()->user->name ?>";
+	// var js_visavisName = "<?php echo $visavis->username ?>";
 </script>
 
 <div id="opacLayer" class="modal fadein hidden" style="background-color:#222222;">
@@ -61,7 +73,7 @@ $logoutLink =  Yii::app()->createUrl('/site/logout');
 						<blockquote id="videoRight_infoText">
 						<?php
 							foreach ($visavis->ownUserStories as $userDescriptionClass) {
-								echo "<p class='spickerP' style='font-size:24px'>".$userDescriptionClass->userStory."</p>";	
+								echo "<p class='spickerP' style='font-size:24px'>".$userDescriptionClass->userStory."</p>";
 							}
 						?>
 						</blockquote>
@@ -124,18 +136,22 @@ video {
 			
 <script>
 
-    var js_visavisName = "<?php echo $visavis->username ?>";
-
 //TODO: export to extra js file
 $(document).ready(function() {
-
+	console.log("welcome");
+	//goToCallButton
 	 $("#goToCallButton").on('click', function (e) {
 		 console.log("goToCall");
 		 e.preventDefault();
+		 if(typeof(js_notID) != 'undefined') {
+			setInvitationToCompleted(js_notID);
+		 }
 		 if($("#waitingContainer")) {
+			 var mediaPlayer = $("#player2");
+			 mediaPlayer.prop('src', "");
+			console.log(mediaPlayer);
 			$("#waitingContainer").slideUp('slow');
 			$("#roomContainer").fadeIn('slow');
-			$("#waitingContainer").empty();
 			$(".modal-backdrop").fadeOut('fast');
 		} 
 	 });
@@ -150,7 +166,7 @@ $(document).ready(function() {
 	});
 	
 	$("#hangUpBtn").on('click', function () {
-		window.location = "index.php?r=site/index&leftCall="+js_visavisName;
+		window.location = "index.php?r=site/index&leftCall=" + js_visavisName;
 	});
 	
 	$("#fullscreenBtn").on('click', function () {
@@ -184,7 +200,7 @@ $(document).ready(function() {
 		$("#fullscreenBtnDiv").removeClass('hidden');		
 		$("#infoBtnDiv").removeClass('hidden');	
 		//$("#localVideo").css({'height': '320px'});
-		$("#remotes").css({'height': '320px'});
+		// $("#remotes").css({'height': '320px'});
 		$("#jumboHeader").show().removeClass('hidden');
 		$("#room_footer").removeClass('footFully');
 		$("#videoRight").removeClass('hidden');
@@ -210,20 +226,20 @@ var getUrlParameter = function getUrlParameter(sParam) {
     }
 };
 </script>
-		<!-- XIRSYS STUFF FOR WEBRTC -->
-        <script src="js/xsdk-master/thirdparty/simplewebrtc.bundle.js"></script>
-        <script src="js/xsdk-master/examples/xirsys_connect.js"></script>
-        <script src="js/xsdk-master/lib/xirsys.core.js"></script>
-        <script src="js/xsdk-master/lib/xirsys.api.js"></script>
-        <script src="js/xsdk-master/lib/xirsys.simplewebrtc.js"></script>
-        <script>
-            // create our webrtc connection
-
+	<!-- XIRSYS STUFF FOR WEBRTC -->
+    <script src="js/xsdk-master/thirdparty/simplewebrtc.bundle.js"></script>
+    <script src="js/xsdk-master/examples/xirsys_connect.js"></script>
+    <script src="js/xsdk-master/lib/xirsys.core.js"></script>
+    <script src="js/xsdk-master/lib/xirsys.api.js"></script>
+    <script src="js/xsdk-master/lib/xirsys.simplewebrtc.js"></script>
+    <script>
+	
+    // create webrtc connection
 	var roomHost = getUrlParameter('host');
 	var roomGuest = getUrlParameter('guest');
 	var roomName = roomHost+roomGuest;
 
-			
+
 	var webrtc = (xirsysConnect.secure === true)
 		? new $xirsys.simplewebrtc(xirsysConnect.token_url, xirsysConnect.ice_url, xirsysConnect.room_url)
 		: new $xirsys.simplewebrtc();
@@ -241,7 +257,6 @@ var getUrlParameter = function getUrlParameter(sParam) {
 			autoAdjustMic: false
 		}
 	);
-
 
 //OLD below
 /*var webrtc = new SimpleWebRTC({
@@ -274,8 +289,8 @@ var getUrlParameter = function getUrlParameter(sParam) {
 					 video.style.height = (video.videoHeight * 0.5) + 'px';
 				 };
 				 remotes.appendChild(d);
-				 remotVideoAppendedCallback();
-			 }
+				 remoteVideoAppendedCallback();
+			}
      });
      webrtc.on('videoRemoved', function (video, peer) {
          console.log('video removed ', peer);
@@ -283,6 +298,7 @@ var getUrlParameter = function getUrlParameter(sParam) {
          var el = document.getElementById('container_' + webrtc.getDomId(peer));
          if (remotes && el) {
              remotes.removeChild(el);
+			 changeNotificationHeader();
          }
      });
 
@@ -301,7 +317,26 @@ var getUrlParameter = function getUrlParameter(sParam) {
 	});
 	 
 	 function remoteVideoAppendedCallback() {
+		 console.log("remoteVideoAppended");
 		 $("#answerModal").modal('show');
+		 //Clear notification
 	 }
 	 
+	 function changeNotificationHeader () {
+		 $(".greeting").val(js_visavisName + ' hat aufgelegt.');
+	 }
+	 
+	 function setInvitationToCompleted(notID) {
+	$.ajax(
+		{
+			url: 'index.php?r=call/markNotAsCompleted',
+			data: {notID : notID}			
+		})
+		.fail(function(error) {
+			console.log("Notification Error: " + error);
+		})
+		.done(function(data) {
+			console.log('notification '+data+ ' marked as completed');
+		});
+}
 </script>

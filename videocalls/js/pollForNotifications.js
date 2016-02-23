@@ -54,7 +54,21 @@ function setInvitationToRejected(notID) {
 		})
 		.done(function(data) {
 			console.log('notification '+data+ ' marked as rejected');
-			$(".greeting").html('Sie haben soeben den Anruf von '+data+' abgelehnt.')
+			$(".greeting").html('Sie haben soeben den Anruf von '+data +' abgelehnt.')
+		});
+}
+
+function setInvitationToCompleted(notID) {
+	$.ajax(
+		{
+			url: 'index.php?r=call/markNotAsCompleted',
+			data: {notID : notID}			
+		})
+		.fail(function(error) {
+			console.log("Notification Error: " + error);
+		})
+		.done(function(data) {
+			console.log('notification '+data+ ' marked as rejected');
 		});
 }
 

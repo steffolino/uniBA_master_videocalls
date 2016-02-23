@@ -21,13 +21,13 @@ $(document).ready(function () {
 	}
 
 	$("#answerModal").on('hide.bs.modal', function () {
-		var notID = $("#answerModal #hidden_notificationID").val();
-		markNotAsAccepted(notID);
-		console.log("dismissed");
+		// var notID = $("#answerModal #hidden_notificationID").val();
+		// markNotAsAccepted(notID);
+		// console.log("dismissed");
 	});
 	$("#rejectModal").on('hide.bs.modal', function () {
 		var notID = $("#rejectModal #hidden_notificationID").val();
-		markNotAsRejected(notID);
+		// markNotAsRejected(notID);
 		console.log("dismissed");
 	});
 

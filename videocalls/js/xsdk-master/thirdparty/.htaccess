@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^/(.*) https://%{HTTP_HOST}/$1 [R=301,L]
+
+Header set Access-Control-Allow-Origin "*
+
+SetEnvIf Origin "http(s)?://(www\.)?(endpoint01.uswest.xirsys.com:449|allowed.domain.two)$" AccessControlAllowOrigin=$0$1
+    Header set Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+    Header set Access-Control-Allow-Credentials true
