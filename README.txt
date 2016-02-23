@@ -9,14 +9,22 @@ In order to install both:
 	directory, e.g. intepub/wwwroot or xampp/htdocs and unzip all content
 	
 In case you only want to install the videocall application into an existing yii installation,
-only extract the /videocalls folder
+only extract the /videocalls folder. Please note that you might have to install and configure all extensions separately (cf. #Extensions).
 
-Content:
+#Content:
       framework/           	framework source files
       requirements/        	requirement checks
 	  videocalls/				the video call application source files
       README               	Manual for Installation, Requirements, Repositories
 
+#Extensions:
+	 The extensions' original zip-files have all been added to the according directory:
+	 videocalls/js/SimpleWebRTC
+	 videocalls/js/xsdk-master
+	 videocalls/protected/extensions/bootstrap
+	 videocalls/protected/extensions/mediaElement
+	 videocalls/protected/extensions/yiibooster
+	 
 
 REQUIREMENTS
 ------------
